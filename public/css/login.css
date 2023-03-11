@@ -84,3 +84,93 @@
     display: none;
   }
 }
+
+/* Login */
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#login {
+  width: 39%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #666;
+}
+
+#login div {
+  margin-bottom: 3%;
+}
+
+#login h1,
+#register h1 {
+  margin: 0;
+  margin-bottom: 13%;
+  font-weight: normal;
+}
+
+#login .head,
+#register .head {
+  border-bottom: 3px solid #bf0b26;
+  width: 98px;
+}
+
+#register .red-underline {
+  border-top: 3px solid #bf0b26;
+  width: 130px;
+  margin-top: 2%;
+}
+
+#register .address-head h2 {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+#login .important,
+#register .important {
+  color: #ff0000;
+  font-weight: 500;
+}
+
+#login .input-container label,
+#register label {
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+#login .input-container input[type="text"],
+#register input[type="text"] {
+  border-radius: 100px;
+  border: 0.5px solid #9da3a7;
+  font-size: 23px;
+  padding-left: 2%;
+}
+
+#login .input-container input[type="text"]:focus,
+#register input[type="text"]:focus,
+#register textarea:focus {
+  outline: none;
+}
+
+label[for="member"],
+.signup-link {
+  font-size: 14px;
+  font-weight: 600;
+}
+.signup-link a {
+  text-decoration: none;
+  color: #bf0b26;
+  margin-left: 1%;
+}
+#login .btn,
+#register .btn {
+  border-radius: 50px;
+  width: 176px;
+  height: 39px;
+}
+
+.middle-line {
+  border-left: 2px solid #ddd;
+}
