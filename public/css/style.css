@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+a {
+  text-decoration: none !important;
+  color: #000;
+}
+
+p {
+  margin: 0;
+}
+
+.nav .logo {
+  font-size: 30px;
+  color: #fff;
+  rotate: -3.67deg;
+}
+
+.nav-bar {
+  background-color: #bf0b26;
+}
+
+ul .nav-link {
+  color: #fff;
+  font-size: 14px;
+}
+
+.bottom-nav {
+  display: none;
+}
+
+.bottom-nav ul {
+  display: inline-flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  color: #e0929d;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+a .bottom-nav-list {
+  color: #e0929d;
+}
+#category-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #e0929d;
+  background-color: #bf0b26;
+  padding: 1% 0;
+}
+
+.row img {
+  width: 100% !important;
+}
+
+#category-bar .category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  justify-content: space-between;
+  height: 55px;
+}
+
+.nav-bar .right-nav .fa-solid {
+  color: #fff;
+}
+
+.nav-bar .right-nav .fa-magnifying-glass {
+  display: none;
+}
+
+.con input {
+  display: none;
+}
+
+.pizza a {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  ul .nav-link {
+    display: none;
+  }
+  .nav-bar input,
+  .right-nav > .cart-button,
+  .fa-globe,
+  .nav-bar .right-nav .link-light {
+    display: none !important;
+  }
+  #category-bar {
+    padding: 2% 0;
+  }
+  .nav-bar .right-nav .fa-magnifying-glass {
+    display: block;
+  }
+  .nav-contain {
+    width: 100%;
+    justify-content: space-between !important;
+  }
+  .bottom-nav {
+    display: block;
+    padding-bottom: 20px !important;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}

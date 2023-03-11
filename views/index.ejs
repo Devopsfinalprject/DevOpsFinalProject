@@ -1,0 +1,14 @@
+<div class="con">
+  <div class="pizza-promote">
+    <h1>SUPREME BBQ</h1>
+  </div>
+</div>
+
+<div id="category-bar">
+  <% categories.forEach(category => { %>
+  <div class="category" data-filter="<%= category.name %>">
+    <div><i class="fa-solid fa-xl fa-<%= category.icon %>"></i></div>
+    <p><%= category.name %></p>
+  </div>
+  <% }); %>
+</div>
