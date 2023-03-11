@@ -110,3 +110,81 @@ a .bottom-nav-list {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .con > .pizza-promote,
+  .fa-magnifying-glass {
+    display: none !important;
+  }
+  #category-bar {
+    padding: 4% 0;
+  }
+
+  .con input {
+    display: inline-flex;
+  }
+  .con-input {
+    background-color: #bf0b26;
+  }
+  .pizza-con-main {
+    flex-direction: column !important;
+    margin-left: 120px !important;
+  }
+  .pizza-con-main img {
+    width: 100% !important;
+  }
+}
+
+.row .btn,
+.pizza-con-main .btn {
+  border-radius: 30px !important;
+  width: 170px;
+}
+
+.pizza .price {
+  font-size: 20px;
+  color: #bf0b26;
+  margin-bottom: 20px !important;
+}
+
+.pizza-promote {
+  text-align: center;
+  width: 100%;
+  height: 636px;
+  background: #bf0b26
+    url(https://demo2.chethemes.com/pizzaro/wp-content/uploads/revslider/home-v1-slider/011-HomePage.jpg)
+    center no-repeat;
+}
+
+.pizza-promote h1 {
+  color: #fff;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 100px;
+  padding-top: 10%;
+}
+
+.current-category {
+  color: #fff !important;
+}
+
+.cart-button {
+  color: #fff;
+  border: 1.5px solid #fff;
+  border-radius: 50px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cart-button .cart-num {
+  position: absolute;
+  background-color: #008456;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  top: -12px;
+  right: -10px;
+}
