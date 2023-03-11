@@ -170,6 +170,31 @@ if (typeof window !== "undefined") {
   })();
 }
 
+// add quantity filter
+if (typeof window !== "undefined") {
+  const minusBtn = document.querySelector(
+    ".select-quantity-btn button:first-child"
+  );
+  const plusBtn = document.querySelector(
+    ".select-quantity-btn button:last-child"
+  );
+  const quantityDisplay = document.querySelector(".select-quantity-btn span");
+
+  let quantity = 1;
+
+  minusBtn.addEventListener("click", () => {
+    if (quantity > 1) {
+      quantity--;
+      quantityDisplay.textContent = quantity;
+    }
+  });
+
+  plusBtn.addEventListener("click", () => {
+    quantity++;
+    quantityDisplay.textContent = quantity;
+  });
+}
+
 app.listen(9000, function () {
   console.log("Server run on port 9000");
 });
