@@ -188,3 +188,110 @@ a .bottom-nav-list {
   top: -12px;
   right: -10px;
 }
+
+/* center */
+.cart-button,
+.cart-button .cart-num,
+.select-quantity-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-top {
+  width: 250px;
+  margin: 1% 0% 0 14%;
+  padding: 0 !important;
+  font-size: 12px;
+}
+
+.detail-top .cate-top {
+  background-color: #d9d9d9;
+  padding: 0 4%;
+}
+
+.detail .pizza-detail {
+  height: 380px;
+  width: 600px;
+}
+
+.detail .pizza-detail .circle-option {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffd235;
+  border-radius: 100px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.detail .pizza-detail .product-size .size,
+.main-size {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.detail .pizza-detail .product-size .size {
+  margin-right: 20px;
+}
+
+.detail .pizza-detail .product-size .size p {
+  margin-left: 10px !important;
+}
+
+.detail .pizza-con-main img {
+  width: 45%;
+  margin-left: 5%;
+}
+
+.detail .pizza-con-main {
+  padding: 5% 0 7% 0;
+}
+
+.select-quantity-btn {
+  width: 165px;
+  height: 38px;
+  border: 1px solid #9fa19a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 100px;
+  padding: 0 2%;
+  font-size: 18px;
+  margin-top: 1%;
+}
+
+.select-quantity-btn button {
+  border: none;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+}
+
+.detail .product-quantity {
+  display: flex;
+}
+
+.detail .product-quantity p {
+  width: 100px;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.active-size {
+  background-color: #ffd235;
+}
+
+.hide {
+  display: none !important;
+}
