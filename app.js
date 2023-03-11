@@ -54,6 +54,56 @@ app.get("/detail", function (req, res) {
   });
 });
 
+// add categories details
+if (typeof window !== "undefined") {
+  document
+    .querySelector("#category-bar")
+    .querySelectorAll("div")[0]
+    .classList.add("current-category");
+
+  (function () {
+    let field = document.querySelector(".row");
+    let li = Array.from(field.children);
+
+    function FilterProduct() {
+      let indicator = document.querySelector("#category-bar").children;
+
+      this.run = function () {
+        for (let i = 0; i < indicator.length; i++) {
+          indicator[i].onclick = function () {
+            for (let x = 0; x < indicator.length; x++) {
+              indicator[x].classList.remove("current-category");
+            }
+            this.classList.add("current-category");
+            const displayItems = this.getAttribute("data-filter");
+
+            for (let z = 0; z < li.length; z++) {
+              li[z].style.transform = "scale(0)";
+              li[z].classList.add("hide");
+              setTimeout(() => {
+                li[z].style.display = "none !important";
+              }, 500);
+
+              if (
+                li[z].getAttribute("data-category") == displayItems ||
+                displayItems == "all"
+              ) {
+                li[z].style.transform = "scale(1)";
+                li[z].classList.remove("hide");
+                setTimeout(() => {
+                  li[z].style.display = "block";
+                }, 500);
+              }
+            }
+          };
+        }
+      };
+    }
+
+    new FilterProduct().run();
+  })();
+}
+
 app.listen(9000, function () {
   console.log("Server run on port 9000");
 });
