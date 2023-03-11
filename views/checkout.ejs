@@ -7,6 +7,87 @@
       <li class="is-active" data-step="2">Checkout</li>
       <li data-step="3" class="progress__last">Order Placed</li>
     </ol>
+    <!-- main for order summery -->
+    <div class="main-section">
+      <div class="select-address">
+        <h5>Delivery Address</h5>
+        <div class="head"></div>
+        <label for="address">Locations:</label>
+        <select name="address" id="address">
+          <option value="">Sydnys, 329 Price St...</option>
+        </select>
+      </div>
+
+      <div class="order-detail">
+        <h5>Order Details</h5>
+        <div class="head"></div>
+
+        <div class="order-section">
+          <h5>Products</h5>
+          <div class="underline"></div>
+
+          <!-- product detail -->
+
+          <div class="order-row">
+            <div class="col">
+              <div class="food-name">
+                <b>2x</b>
+                <p>Chicken Trio</p>
+              </div>
+              <p>51.80</p>
+            </div>
+            <div class="size">Size: 28 cm</div>
+          </div>
+
+          <div class="order-row">
+            <div class="col">
+              <div class="food-name">
+                <b>2x</b>
+                <p>Chicken Trio</p>
+              </div>
+              <p>51.80</p>
+            </div>
+            <div class="size">Size: 28 cm</div>
+          </div>
+
+          <div class="order-row">
+            <div class="col">
+              <div class="food-name">
+                <b>2x</b>
+                <p>Chicken Trio</p>
+              </div>
+              <p>51.80</p>
+            </div>
+            <div class="size">Size: 28 cm</div>
+          </div>
+
+          <!-- total section -->
+
+          <div class="underline"></div>
+
+          <div class="col main">
+            <b>Subtotal</b>
+            <p>51.80</p>
+          </div>
+
+          <div class="underline"></div>
+
+          <div class="col main">
+            <b>Delivery</b>
+            <p class="delivery">Free Delivery</p>
+          </div>
+
+          <div class="underline"></div>
+
+          <div class="col main">
+            <b>Order Total</b>
+            <p>51.80</p>
+          </div>
+
+          <button class="btn btn-success" type="submit">Place Order</button>
+        </div>
+      </div>
+    </div>
   </main>
 </form>
 <%- include('footer') %>
