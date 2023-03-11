@@ -1,0 +1,41 @@
+<%- include('head') %> <%- include('header') %>
+
+<form action="/checkout" method="post">
+  <main id="register">
+    <div class="user-info">
+      <div class="head">
+        <h1>Register</h1>
+      </div>
+
+      <!-- create register form -->
+      <p class="description">Create your very own account</p>
+
+      <div class="input-container">
+        <label for="user-name"
+          >Email Address <span class="important">*</span></label
+        >
+        <input type="text" name="username" id="user-name" required />
+      </div>
+
+      <div class="input-container">
+        <label for="password">Password <span class="important">*</span></label>
+        <input type="text" name="password" id="password" required />
+      </div>
+
+      <div>
+        <input type="checkbox" name="member" id="member" />
+        <label for="member">Remember Me</label>
+      </div>
+
+      <div>
+        <button class="btn btn-success" type="submit">Register</button>
+      </div>
+
+      <p class="signup-link">
+        Don't have account yet? <a href="/signin"> Sign in</a>
+      </p>
+    </div>
+  </main>
+</form>
+
+<%- include('footer') %>
