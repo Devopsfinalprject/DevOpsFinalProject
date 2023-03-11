@@ -1,0 +1,24 @@
+<%- include('head') %> <%- include('header') %>
+<main id="check-address">
+  <!-- progress bar -->
+  <ol class="progress-bar">
+    <li class="is-complete" data-step="1">Shopping Cart</li>
+    <li class="is-complete" data-step="2">Checkout</li>
+    <li class="is-active" data-step="3" class="progress__last">Order Placed</li>
+  </ol>
+
+  <!-- messages of order completed -->
+  <div id="order-complete">
+    <img src="img/ICON/Group.svg" alt="Group" />
+    <p>
+      Thank you for ordering in our restaurant. Your order number is
+      <b>#<span>2097</span></b> Now check a Pizza Tracker progress with your
+      order.
+    </p>
+    <!-- CTA button -->
+    <a href="/orders"
+      ><button class="btn btn-success btn-sm">Go To Pizza Tracker</button></a
+    >
+  </div>
+</main>
+<%- include('footer') %>
