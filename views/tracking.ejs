@@ -1,0 +1,26 @@
+<%- include('head') %> <%- include('header') %>
+<form action="" method="post">
+  <main id="tracking">
+    <h1>Track Order</h1>
+    <p>
+      To track your order please enter your Order ID in the box below and press
+      the "Track" button. This was given to you on your receipt and in the
+      confirmation email you should have received.
+    </p>
+
+    <!-- create tracking search bar -->
+    <div class="tracking-input">
+      <label for="">Order ID</label>
+      <input
+        type="text"
+        name="order-id"
+        placeholder="Found in your order confirmation email."
+      />
+      <div>
+        <button class="btn btn-success" type="submit">Track</button>
+      </div>
+    </div>
+  </main>
+</form>
+
+<%- include('footer') %>
