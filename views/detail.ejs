@@ -52,6 +52,33 @@
       </div>
     </div>
   </div>
+  <div>
+    <h5 class="text-center">You may also like</h5>
+    <div class="border-top"></div>
+
+    <a href="/detail">
+      <div class="row">
+        <% let i = 0;%> <% pizzas.forEach( (pizza, i) => { %> <% if(i < 3) { %>
+        <div
+          class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center pizza mt-5"
+        >
+          <img
+            class="pizza-img"
+            src="../img/PIZZA/<%= pizza.name %>.png"
+            alt="pizza-img"
+          />
+          <h4><%= pizza.name %></h4>
+          <p class="price">£<%= pizza.price %></p>
+          <span style="display: none"><%= pizza.category %></span>
+          <div>
+            <button class="btn btn-outline-secondary">Add to cart</button>
+            <button class="btn btn-success">Buy now</button>
+          </div>
+        </div>
+        <% i++ } %> <% }) %>
+      </div>
+    </a>
+  </div>
 </main>
 
 <%- include('footer') %>
