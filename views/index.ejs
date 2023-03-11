@@ -16,5 +16,29 @@
   <% }); %>
 </div>
 
-<!-- footer -->
-<%- include('footer') %>
+<!-- add list of items for each menu -->
+<div class="row">
+  <% pizzas.forEach( pizza => { %> <% let cateName =
+  pizza.category.toUpperCase() %>
+  <div
+    data-category="<%= pizza.category %>"
+    class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center pizza mt-5"
+  >
+    <a href="/detail/<%= pizza.name %>">
+      <img
+        class="pizza-img"
+        src="img/<%= cateName %>/<%= pizza.name %>.png"
+        alt="pizza-img"
+      />
+      <h4><%= pizza.name %></h4>
+      <p class="price">£<%= pizza.price %></p>
+      <div>
+        <button class="btn btn-outline-secondary">Add to cart</button>
+        <button class="btn btn-success">Buy now</button>
+      </div>
+    </a>
+  </div>
+
+  <!-- footer -->
+  <%- include('footer') %>
+</div>
