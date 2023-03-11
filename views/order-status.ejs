@@ -26,5 +26,21 @@
     <p>Order Status: <b>We are now preparing your Pizza</b></p>
     <p>Estimated Delivery Time: 30 minutes</p>
   </div>
+
+  <!-- progress bar -->
+  <ol class="progress-bar">
+    <li class="is-complete" data-step="">
+      <img class="clock-icon" src="img/ICON/clock-icon.svg" alt="clock-icon" />
+      <p>Queue</p>
+    </li>
+    <li class="is-active" data-step="">
+      <img class="pot-icon" src="img/ICON/CookingPot.svg" alt="CookingPot" />
+      <p>Cook</p>
+    </li>
+    <li data-step="" class="progress__last">
+      <img class="drive-icon" src="img/ICON/drive.svg" alt="drive" />
+      <p>Delivered</p>
+    </li>
+  </ol>
 </main>
 <%- include('footer') %>
