@@ -195,6 +195,26 @@ if (typeof window !== "undefined") {
   })();
 }
 
+// selecting size
+if (typeof window !== "undefined") {
+  const size = document.querySelector(".main-size");
+  let sizes = document.querySelectorAll(".circle-option");
+  let price = document.getElementById("detail-price");
+
+  price.innerHTML = "";
+
+  size.addEventListener("click", (e) => {
+    if (e.target.classList == "circle-option") {
+      sizes.forEach((e) => {
+        e.classList.remove("active-size");
+      });
+      e.target.classList.add("active-size");
+      currentPrice = e.target.parentElement.querySelector("p").innerHTML;
+      price.innerText = "£" + currentPrice;
+    }
+  });
+}
+
 app.listen(9000, function () {
   console.log("Server run on port 9000");
 });
