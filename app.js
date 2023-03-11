@@ -54,6 +54,72 @@ app.get("/detail", function (req, res) {
   });
 });
 
+//not yet
+app.get("/Menu", function (req, res) {
+  // res.sendFile(__dirname + "/index.html");
+  // res.render('index');
+  res.send("Menu");
+});
+
+app.get("/orders", function (req, res) {
+  // res.sendFile(__dirname + "/index.html");
+  res.render("tracking");
+});
+
+app.post("/orders", function (req, res) {
+  // res.sendFile(__dirname + "/index.html");
+  res.render("order-status");
+});
+
+app.get("/signup", function (req, res) {
+  // res.sendFile(__dirname + "/index.html");
+  res.render("register");
+});
+
+app.get("/signin", function (req, res) {
+  // res.sendFile(__dirname + "/index.html");
+  res.render("login");
+});
+
+app.post("/cart", function (req, res) {
+  res.redirect("/cart");
+});
+
+app.get("/cart", function (req, res) {
+  // res.sendFile(__dirname + "/index.html");
+  res.render("shoppingcart");
+});
+
+app.post("/checkout", function (req, res) {
+  res.render("checkout");
+});
+
+app.post("/order-complete", function (req, res) {
+  res.render("order-complete");
+});
+
+app.get("/account", function (req, res) {
+  res.render("account");
+});
+
+app.get("/detail/:food", function (req, res) {
+  let food = _.lowerCase(req.params.food);
+
+  pizzas.forEach(function (pizza) {
+    let checkFoodTitle = _.lowerCase(pizza.name);
+
+    if (food == checkFoodTitle) {
+      res.render("detail", {
+        name: pizza.name,
+        price: pizza.price,
+        category: pizza.category,
+        pizzas: pizzas,
+        categories: categories,
+      });
+    }
+  });
+});
+
 // add categories details
 if (typeof window !== "undefined") {
   document
