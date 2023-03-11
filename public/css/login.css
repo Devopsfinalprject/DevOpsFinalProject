@@ -1,0 +1,86 @@
+/* register */
+
+#register {
+  margin: 7% 10% 0 auto;
+  display: flex;
+  flex-direction: row;
+  color: #666;
+  justify-content: space-between;
+  margin-left: 15%;
+}
+
+#register .description,
+#login .description {
+  margin: 5% 0 !important;
+}
+
+#register .address-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+
+#register .address-container .first {
+  padding-right: 3%;
+}
+
+#register .user-info {
+  width: 380px;
+}
+
+#register .user-info .input-container {
+  margin-bottom: 8%;
+}
+
+#register .user-address {
+  width: 600px;
+}
+
+#register .user-address .input-container {
+  margin-bottom: 3%;
+}
+
+#register .user-address input[type="text"] {
+  width: 100%;
+}
+
+#register .btn {
+  margin: 5% 0;
+}
+
+#register textarea {
+  border: 0.5px solid #9da3a7;
+}
+
+/* screen size */
+
+@media screen and (max-width: 1024px) {
+  #login {
+    width: 500px;
+  }
+  #register {
+    margin-left: 6%;
+  }
+  #register .user-address {
+    width: 360px;
+  }
+  #register .middle-line {
+    margin: 0 5%;
+  }
+}
+
+/* mobile */
+
+@media screen and (max-width: 600px) {
+  #login {
+    width: 300px;
+  }
+  #register {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  #register .middle-line {
+    display: none;
+  }
+}
