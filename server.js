@@ -77,6 +77,24 @@ app.post("/checkout", Authen.authentication, async function (req, res) {
   );
   const insertAddress = findAddress[0].addresses[0];
   console.log(insertAddress);
+
+  // create new order
+  const order = new Order({
+    user: req.session.userId,
+    address: insertAddress,
+    cart: cart,
+    status: findStatus[0],
+  });
+  await order
+    .save()
+    .then(function (result) {
+      req.session.cart = null;
+      req.session.orderID = order._id;
+      res.redirect("/order-complete");
+    })
+    .catch(function (err) {
+      handleError(err);
+    });
 });
 
 // add sign up info to database
