@@ -71,6 +71,12 @@ include('category-bar') %>
     </div>
   </div>
   <!-- -->
+  <div>
+    <h5 class="text-center">You may also like</h5>
+    <div class="border-top"></div>
+
+    <a href="/detail">
+      <div class="border-top"></div>
   <div class="row">
     <% let i = 0; %> <% pizzas.forEach( (pizza) => { %> <% if
     (pizza.category[0].name == category) { %> <% if(i < 3) { %>
@@ -93,6 +99,10 @@ include('category-bar') %>
 <% } %>
     <% }) %>
   </div>
+</div>
+</a>
+</div>
+
 </main>
 
 <%- include('./templates/footer') %>
