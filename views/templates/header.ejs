@@ -135,10 +135,18 @@
       </li>
     </a>
 
-    <a href="/cart">
+    <a href="/shipping-cart">
       <li class="bottom-nav-list">
         <i class="fa-solid fa-xl fa-basket-shopping"></i>
         <p>Cart</p>
+        <div class="mobile-cart-num">
+          <span id="mobile-cart-num">
+            <% if(!session.cart) { %> <%= 0 %> <% } else { %> <%=
+            session.cart.totalQty %> <% } %>
+          </span>
+        </div>
+
+
       </li>
     </a>
 
