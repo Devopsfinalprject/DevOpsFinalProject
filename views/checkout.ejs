@@ -34,17 +34,18 @@ include('./templates/top-path') %>
           <div class="underline"></div>
 
           <!-- product detail -->
-
+          <% products.forEach( (product) => { %>
           <div class="order-row">
             <div class="col">
               <div class="food-name">
-                <b>2x</b>
-                <p>Chicken Trio</p>
+                <b>product.qty %>x</b>
+                <p><%= product.item.name %></p>
               </div>
-              <p>51.80</p>
+              <p>£<%= product.price.toFixed(2) %></p>
             </div>
             <div class="size">Size: 28 cm</div>
           </div>
+          <% }) %>
 
           <div class="order-row">
             <div class="col">
