@@ -48,6 +48,16 @@ app.use(function (req, res, next) {
 
 const Cart = require("./model/cart");
 
+// jqury and jsdom
+var jsdom = require("jsdom");
+const order = require("./model/order");
+const { startSession } = require("./model/order");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM();
+const { document } = new JSDOM("").window;
+global.document = document;
+var $ = require("jquery")(window);
+
 app.get("/", function (req, res) {
   // res.sendFile(__dirname + "/index.html");
   res.render("index", {
