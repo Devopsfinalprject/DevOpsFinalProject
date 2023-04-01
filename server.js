@@ -41,6 +41,10 @@ app.use(
     }),
   })
 );
+app.use(function (req, res, next) {
+  res.locals.session = req.session;
+  next();
+});
 
 app.get("/", function (req, res) {
   // res.sendFile(__dirname + "/index.html");
