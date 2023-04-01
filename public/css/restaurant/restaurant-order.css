@@ -190,3 +190,9 @@ p {
 .detail .cust-detail-container .each-status {
   width: 50%;
 }
+.detail .order-detail-container img {
+  width: 45px;
+  height: 35px;
+  object-fit: cover;
+  margin-right: 15px;
+}
