@@ -50,9 +50,26 @@ app.get("/signup", function (req, res) {
   res.render("register");
 });
 
-app.get("/signin", function (req, res) {
-  // res.sendFile(__dirname + "/index.html");
-  res.render("login");
+app.post("/user/signin", async function (req, res) {
+  // Get user input using bodyParser
+  const { email, password } = req.body;
+
+  // check if user already exist
+  // Validate if user exist in our database
+  const oldUser = await User.findOne({
+    email: email,
+    password: password,
+  }).exec();
+
+  if (oldUser) {
+    // User already exist >> update session information
+    req.session.userName = oldUser.username;
+    req.session.userId = oldUser._id;
+    // console.log(req.session);
+    res.redirect("/checkout");
+  } else {
+    res.redirect("/");
+  }
 });
 
 app.post("/cart", function (req, res) {
