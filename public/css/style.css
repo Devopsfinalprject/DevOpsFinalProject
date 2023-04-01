@@ -125,6 +125,14 @@ a .bottom-nav-list {
   height: 250px;
   object-fit: cover;
 }
+.row .btn-outline-secondary img {
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+
+.row h4 {
+  color: #6e6d6d;
+}
 
 .row img {
   width: 100% !important;
@@ -137,6 +145,7 @@ a .bottom-nav-list {
   width: 200px;
   justify-content: space-between;
   height: 55px;
+  color: #e0929d;
 }
 
 .nav-bar .right-nav .fa-solid {
