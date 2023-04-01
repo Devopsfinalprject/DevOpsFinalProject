@@ -7,6 +7,9 @@
   margin: 5% 0;
 }
 
+#tracking h1 {
+  font-weight: 400;
+}
 #tracking p {
   width: 625px;
   text-align: center;
