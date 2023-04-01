@@ -63,44 +63,71 @@
             </div>
           </div>
           <div class="border-left"></div>
-           <!-- customer info -->
-           <div class="cust-detail-container">
+          <!-- customer info -->
+          <div class="cust-detail-container">
             <div>
-                <h5>Customer Detail</h5>
-                <% const address = order.address %>
-                <div>
-                    <div class="cols">
-                        <p class="cust-name"><%= address.firstname %> <%= address.lastname %></p>
-                        <div class="d-flex align-items-center">
-                            <i class="fa-solid fa-location-dot me-2"></i>
-                            <p><%= address.address %> <%= address.city %> <%= address.postcode %></p>
-                        </div>
-                    </div>
-
-                    <div class="cols">
-                        <div class="each-status">
-                            <p class="status">Status</p>
-                            <p><%= order.status.status %></p>
-                        </div>
-
-                        <div>
-                            <p class="date">Date</p>
-                            <p><%= date %></p>
-                        </div>
-                    </div>
+              <h5>Customer Detail</h5>
+              <% const address = order.address %>
+              <div>
+                <div class="cols">
+                  <p class="cust-name">
+                    <%= address.firstname %> <%= address.lastname %>
+                  </p>
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-location-dot me-2"></i>
+                    <p>
+                      <%= address.address %> <%= address.city %> <%=
+                      address.postcode %>
+                    </p>
+                  </div>
                 </div>
+
+                <div class="cols">
+                  <div class="each-status">
+                    <p class="status">Status</p>
+                    <p><%= order.status.status %></p>
+                  </div>
+
+                  <div>
+                    <p class="date">Date</p>
+                    <p><%= date %></p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="status-btn">
-                <a href="/restaurant/delete-order/<%=order._id%>"><button class="btn btn-outline-danger">Cancel Order</button></a>
-                <a href="/restaurant/update/<%= order.status.name %>/<%=order._id%>"><button class="btn btn-success"><%= order.status.name %> Order</button></a>
+              <a href="/restaurant/delete-order/<%=order._id%>"
+                ><button class="btn btn-outline-danger">Cancel Order</button></a
+              >
+              <a
+                href="/restaurant/update/<%= order.status.name %>/<%=order._id%>"
+                ><button class="btn btn-success">
+                  <%= order.status.name %> Order
+                </button></a
+              >
             </div>
+          </div>
+        </div>
+        <!-- check and display map if the order status is "Delivery" -->
+        <% if(statusName === 'Delivery') { %>
+        <!-- provide map api -->
+        <div class="tracking">
+          <h5>Track Orders</h5>
+          <div>
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1682.5453476985383!2d98.98685348921491!3d18.789840566142846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da2fe517a5edcf%3A0xd41a7f085917011f!2z4Lie4Li04LiL4LiL4LmI4Liy4Liu4Lix4LiXIOC4quC4suC4guC4suC4oeC4k-C4teC4meC4nuC4o-C4seC4leC4meC5jA!5e0!3m2!1sth!2sth!4v1678041694314!5m2!1sth!2sth"
+              style="border: 0"
+              width="100%"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
         <% } %>
-
-
       </div>
     </div>
-    <% } %>
-    <% }) %>
+    <% } %> <% }) %>
   </div>
 </section>
