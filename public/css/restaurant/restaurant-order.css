@@ -244,3 +244,6 @@ p {
 .detail .tracking {
   margin-top: 50px;
 }
+.detail .tracking h5 {
+  margin-bottom: 20px;
+}
