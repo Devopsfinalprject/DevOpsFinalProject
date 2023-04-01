@@ -160,3 +160,9 @@ const setOrderStatus = () => {
     .then(() => console.log("Add all the order's status succussfuly"))
     .catch((err) => console.log(err));
 };
+// add all default item to databse
+exports.setDefaultAll = () => {
+  setCategory();
+  setFood();
+  setOrderStatus();
+};
