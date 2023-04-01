@@ -199,3 +199,12 @@
   parent.style.color = "white";
   parent.style.background = "#BF0B26";
 </script>
+<% if(statusName === "Queue") { %>
+<script>
+  parent.style.borderRadius = "8px 0px 0px 8px";
+</script>
+<% }else if(statusName === "Delivery") { %>
+<script>
+  parent.style.borderRadius = "0px 8px 8px 0px";
+</script>
+<% } %>
