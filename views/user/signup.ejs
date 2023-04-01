@@ -1,4 +1,4 @@
-<%- include('head') %> <%- include('header') %>
+<%- include('../templates/head') %> <%- include('../templates/header') %>
 <form action="/checkout" method="post">
   <main id="register">
     <div class="user-info">
@@ -10,12 +10,16 @@
       <p class="description">Create your very own account</p>
 
       <div class="input-container">
-        <label for="user-name"
-          >Email Address <span class="important">*</span></label
-        >
+        <label for="user-name">Username <span class="important">*</span></label>
         <input type="text" name="username" id="user-name" required />
       </div>
 
+      <div class="input-container">
+        <label for="user-name"
+          >Email Address <span class="important">*</span></label
+        >
+        <input type="email" name="email" id="email" required />
+      </div>
       <div class="input-container">
         <label for="password">Password <span class="important">*</span></label>
         <input type="text" name="password" id="password" required />
@@ -100,4 +104,4 @@
     </div>
   </main>
 </form>
-<%- include('footer') %>
+<%- include('../templates/footer') %>
