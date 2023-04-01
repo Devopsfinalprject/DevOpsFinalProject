@@ -131,3 +131,71 @@
     <% } %> <% }) %>
   </div>
 </section>
+
+<script>
+  // show order detail when click icon
+  const buttons = document.querySelectorAll(".show-detail");
+  const downBtn = document.querySelectorAll(".fa-chevron-up");
+  const showIcon = document.querySelectorAll(".show-icon");
+  const orderStatus = document.getElementById("order-status");
+  const btmNav = document.querySelector(".bottom-nav");
+  const leftNav = document.getElementById("rest-left-nav");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      if (e.target.nodeName === "BUTTON") {
+        const para = e.target.nextElementSibling;
+        const icon = e.target.querySelector("i");
+        const orderDate = e.target.querySelector(".order-date");
+
+        para.classList.toggle("show");
+        icon.classList.toggle("rotate");
+        button.classList.toggle("show");
+        orderDate.classList.toggle("show");
+        e.target.querySelector(".show-icon").classList.toggle("show");
+        e.target.querySelector(".order-total").classList.toggle("show");
+      }
+    });
+  });
+  showIcon.forEach((event) => {
+    event.addEventListener("click", (e) => {
+      const parent = e.target.parentElement.parentElement;
+      const para = parent.nextElementSibling;
+      const icon = parent.querySelector("i");
+      const orderDate = parent.querySelector(".order-date");
+
+      para.classList.toggle("show");
+      icon.classList.toggle("rotate");
+      parent.classList.toggle("show");
+      orderDate.classList.toggle("show");
+      parent.querySelector(".show-icon").classList.toggle("show");
+      parent.querySelector(".order-total").classList.toggle("show");
+    });
+  });
+  downBtn.forEach((event) => {
+    event.addEventListener("click", (e) => {
+      const parent = e.target.parentElement.parentElement.parentElement;
+      const para = parent.nextElementSibling;
+      const icon = parent.querySelector("i");
+      const orderDate = parent.querySelector(".order-date");
+
+      para.classList.toggle("show");
+      icon.classList.toggle("rotate");
+      parent.classList.toggle("show");
+      orderDate.classList.toggle("show");
+      parent.querySelector(".show-icon").classList.toggle("show");
+      parent.querySelector(".order-total").classList.toggle("show");
+    });
+  });
+
+  // change color of bottom menu
+  btmNav.querySelectorAll("li")[0].style.color = "white";
+
+  // change color of left nav
+  leftNav.querySelectorAll("i")[0].style.color = "#000";
+
+  // change color when click each status
+  let parent = orderStatus.querySelector(".<%= statusName %>").parentElement;
+  parent.style.color = "white";
+  parent.style.background = "#BF0B26";
+</script>
