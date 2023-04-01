@@ -445,6 +445,21 @@ app.get("/add-this-to-cart/:id/:qty", async function (req, res) {
   }
 });
 
+// add item to cart when click 'buy-now' button
+app.get("/buy-now/:id", async function (req, res) {
+  const productId = req.params.id;
+  let cart = new Cart(req.session.cart ? req.session.cart : {});
+
+  const product = await Food.findById(productId);
+  if (!product) {
+    return res.redirect("/");
+  } else {
+    cart.add(product, productId);
+    req.session.cart = cart;
+    res.redirect("/checkout");
+  }
+});
+
 // retaurant side
 
 app.get("/admin/signup", function (req, res) {
