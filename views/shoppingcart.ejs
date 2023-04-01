@@ -104,6 +104,18 @@ include('./templates/top-path') %>
             <h5>Price:</h5>
             <p>£<%= (product.item.price).toFixed(2) %></p>
           </div>
+          <div class="col">
+            <h5>Quantity</h5>
+            <div class="qty-btn">
+              <a href="/reduce/<%= product.item._id %>"
+                ><button class="minus-btn">-</button></a
+              >
+              <span class="cart-num"><%= product.qty %></span>
+              <a href="/add/<%= product.item._id %>"
+                ><button class="plus-btn">+</button></a
+              >
+            </div>
+          </div>
 
         </div>
           <% }) %>
