@@ -495,3 +495,11 @@ a .bottom-nav-list {
   top: 0;
   left: 0;
 }
+
+.error {
+  background-color: #e2401c;
+}
+
+.error .left {
+  background-color: #bf0b26;
+}
