@@ -230,6 +230,21 @@ app.post("/admin/signin", async function (req, res) {
   }
 });
 
+app.post("/admin/signup", function (req, res) {
+  // Get user input using bodyParser
+  const { username, email, password } = req.body;
+
+  // new user --> add new user to database
+  const newUser = new Admin({
+    username: username,
+    email: email,
+    password: password,
+  });
+
+  newUser.save();
+  res.redirect("/admin/signin");
+});
+
 app.listen(9000, function () {
   console.log("Server run on port 9000");
 });
