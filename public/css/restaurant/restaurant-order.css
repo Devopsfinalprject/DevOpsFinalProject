@@ -140,3 +140,6 @@ p {
 .show-icon.show {
   background: rgba(255, 255, 255, 0.2);
 }
+.detail .order-detail-container {
+  width: 50%;
+}
