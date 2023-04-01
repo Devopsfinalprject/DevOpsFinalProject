@@ -432,6 +432,17 @@ app.get("/add-this-to-cart/:id/:qty", async function (req, res) {
   let productId = req.params.id;
   let productQty = parseInt(req.params.qty);
   let cart = new Cart(req.session.cart ? req.session.cart : {});
+  const product = await Food.findById(productId);
+  if (!product) {
+    return res.redirect("/");
+  } else {
+    cart.addIndividule(product, product.id, productQty);
+    req.session.cart = cart;
+    req.session.addedMsg =
+      productQty + " x “" + product.name + "” have been added to your cart.";
+    req.session.currentQty = 1;
+    res.redirect("/detail/" + productId);
+  }
 });
 
 // retaurant side
