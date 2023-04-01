@@ -278,4 +278,7 @@ p {
   .detail .cust-info {
     flex-direction: column;
   }
+  #rest-left-nav {
+    display: none;
+  }
 }
