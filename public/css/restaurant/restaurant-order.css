@@ -240,3 +240,7 @@ p {
   display: flex;
   flex-direction: row;
 }
+
+.detail .tracking {
+  margin-top: 50px;
+}
