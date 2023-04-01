@@ -93,6 +93,10 @@ ul .nav-link {
   font-size: 12px;
 }
 
+.right-nav .link-light {
+  font-size: 14px;
+}
+
 .bottom-nav ul {
   display: inline-flex;
   list-style: none;
