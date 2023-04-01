@@ -58,12 +58,12 @@ const { document } = new JSDOM("").window;
 global.document = document;
 var $ = require("jquery")(window);
 
-app.get("/", function (req, res) {
-  // res.sendFile(__dirname + "/index.html");
-  res.render("index", {
-    categories: categories,
-    pizzas: pizzas,
-  });
+app.get("/", async (req, res) => {
+  const pizzas = await Food.find({});
+  const categories = await Category.find({});
+  const status = await Status.find({});
+  const pizzaId = await Category.find({ name: "Pizza" }, { _id: 1 });
+  req.session.currentQty = 1;
 });
 
 app.get("/detail", function (req, res) {
