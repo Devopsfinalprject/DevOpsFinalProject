@@ -277,6 +277,23 @@ a .bottom-nav-list {
 .current-category {
   color: #fff !important;
 }
+.mobile-cart-num {
+  position: absolute !important;
+  background-color: #008456;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  top: -15px;
+  right: -20px;
+}
+
+#mobile-cart-num {
+  color: #fff;
+}
+
+.bottom-nav-list {
+  position: relative;
+}
 
 .cart-button {
   color: #fff;
