@@ -81,5 +81,23 @@ include('./templates/top-path') %>
         '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
     }
   ).addTo(map);
+
+  // market icon
+  var taxiIcon = L.icon({
+    iconUrl: "../img/icon/taxi.png",
+    iconSize: [38, 38],
+  });
+
+  // create customer location icon
+  var custIcon = L.icon({
+    iconUrl: "../img/icon/red-location.png",
+    iconSize: [38, 38],
+  });
+
+  // create restaurant icon
+  var restIcon = L.icon({
+    iconUrl: "../img/icon/red-point.png",
+    iconSize: [12, 12],
+  });
 </script>
 <%- include('./templates/footer') %>
