@@ -459,6 +459,20 @@ app.get("/buy-now/:id", async function (req, res) {
     res.redirect("/checkout");
   }
 });
+// add individule item to cart when click 'buy-now' button
+app.get("/buy-this-now/:id", async function (req, res) {
+  const productId = req.params.id;
+  let cart = new Cart(req.session.cart ? req.session.cart : {});
+
+  const product = await Food.findById(productId);
+  if (!product) {
+    return res.redirect("/");
+  } else {
+    cart.addIndividule(product, productId);
+    req.session.cart = cart;
+    res.redirect("/checkout");
+  }
+});
 
 // retaurant side
 
