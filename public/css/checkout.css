@@ -70,6 +70,13 @@ p {
   background-color: #fff;
   border: 1px solid #9da3a7;
 }
+#checkout .col .qty-btn .cart-num,
+.test-product .product-name p {
+  font-size: 12px;
+}
+.test-product .product-name p {
+  margin-top: 10px;
+}
 
 #checkout .col .qty-btn button {
   width: 15px;
