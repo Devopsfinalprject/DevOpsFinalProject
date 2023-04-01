@@ -136,4 +136,19 @@ include('../restaurant/partials/nav-bar') %>
       }
     });
   });
+  showIcon.forEach((event) => {
+    event.addEventListener("click", (e) => {
+      const parent = e.target.parentElement.parentElement;
+      const para = parent.nextElementSibling;
+      const icon = parent.querySelector("i");
+      const orderDate = parent.querySelector(".order-date");
+
+      para.classList.toggle("show");
+      icon.classList.toggle("rotate");
+      parent.classList.toggle("show");
+      orderDate.classList.toggle("show");
+      parent.querySelector(".show-icon").classList.toggle("show");
+      parent.querySelector(".order-total").classList.toggle("show");
+    });
+  });
 </script>
