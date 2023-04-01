@@ -206,6 +206,10 @@ app.get("/admin/signup", function (req, res) {
   res.render("admin/signup");
 });
 
+app.get("/admin/signin", function (req, res) {
+  res.render("admin/signin");
+});
+
 app.post("/admin/signup", function (req, res) {
   // Get user input using bodyParser
   const { username, email, password } = req.body;
@@ -219,6 +223,27 @@ app.post("/admin/signup", function (req, res) {
 
   newUser.save();
   res.redirect("/admin/signin");
+});
+
+app.post("/admin/signin", async function (req, res) {
+  // Get user input using bodyParser
+  const { email, password } = req.body;
+
+  // check if user already exist
+  // Validate if user exist in our database
+  const oldUser = await Admin.findOne({
+    email: email,
+    password: password,
+  }).exec();
+
+  if (oldUser) {
+    // User already exist >> update session information
+    req.session.adminId = oldUser.id;
+    // console.log(req.session);
+    res.redirect("/restaurant");
+  } else {
+    res.redirect("/admin/signup");
+  }
 });
 
 app.listen(9000, function () {
