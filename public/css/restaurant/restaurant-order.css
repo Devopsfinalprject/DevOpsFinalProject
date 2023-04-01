@@ -169,3 +169,7 @@ p {
   display: flex;
   flex-direction: row;
 }
+.detail .order-detail-container .cols,
+.detail .cust-detail-container {
+  justify-content: space-between;
+}
