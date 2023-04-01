@@ -191,6 +191,15 @@ a .bottom-nav-list {
     bottom: 0;
     width: 100%;
   }
+  #cart {
+    display: none;
+  }
+  .right-nav .shopping-cart {
+    display: none;
+  }
+  #more .col {
+    margin: 10px 0 !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
