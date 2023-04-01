@@ -165,6 +165,10 @@ include('./templates/top-path') %>
       <a href="/"><button class="btn btn-danger">Return to shop</button></a>
   </section>
   <% } %> <%- include('./templates/footer') %>
+  <script>
+    document.getElementById("moto-icon-hide").style.display = "none";
+    document.querySelectorAll(".bottom-nav li")[3].style.color = "white";
+  </script>
 
 
 <%- include('footer') %>
