@@ -1,5 +1,27 @@
-.logout {
-  display: inline-flex !important;
+#rest-top-nav {
+  background-color: #bf0b26;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 25px;
+  z-index: 10;
+}
+
+#rest-top-nav .logo {
+  color: #fff;
+  font-family: "Shrikhand", cursive;
+  font-size: 22px;
+  rotate: -3.67deg;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#rest-top-nav img {
+  width: 40px;
 }
 #rest-left-nav {
   position: fixed;
@@ -33,4 +55,7 @@
 #rest-left-nav .fa-right-from-bracket,
 #more .fa-arrow-right-from-bracket {
   rotate: 180deg;
+}
+.logout {
+  display: inline-flex !important;
 }
