@@ -214,3 +214,6 @@ p {
   display: flex;
   flex-direction: column;
 }
+.detail .cust-detail-container .cols .fa-location-dot {
+  color: #9da3a7;
+}
