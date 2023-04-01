@@ -89,7 +89,19 @@ include('./templates/top-path') %>
     <!-- item mobile -->
 
     <section id="mobile-view">
-      
+      <% products.forEach((product) => { %>
+        <div>
+          <a href="/remove/<%= product.item._id %>"
+            ><div class="close"><i class="fa-solid fa-xmark"></i></div
+          ></a>
+          <div class="col">
+            <h5>Product:</h5>
+            <div>
+              <p><%= product.item.name %></p>
+              <p>Size: 29 cm</p>
+            </div>
+          </div>
+          <% }) %>
     </section>
 
     <!-- buttons -->
