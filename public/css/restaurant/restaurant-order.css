@@ -71,3 +71,6 @@ p {
   transition: all 0.3s;
   border-radius: 0px 0px 6px 6px;
 }
+.question .show-detail i.rotate {
+  transform: none;
+}
