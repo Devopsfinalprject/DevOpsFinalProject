@@ -503,3 +503,25 @@ a .bottom-nav-list {
 .error .left {
   background-color: #bf0b26;
 }
+
+.added {
+  background-color: #0f834d;
+  font-size: 14px;
+}
+
+.added a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.added .left {
+  background-color: #0d6f42;
+}
+
+.added .right {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  border-left: 1px solid #7dbc9f;
+  padding-left: 14px;
+}
