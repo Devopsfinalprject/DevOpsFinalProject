@@ -343,6 +343,23 @@ a .bottom-nav-list {
   width: 600px;
 }
 
+.detail .pizza-detail p {
+  color: #6e6d6d;
+}
+
+.detail .pizza-detail #detail-price {
+  color: #bf0b26;
+}
+
+.detail .display-error-container {
+  margin: 0 auto;
+  margin-top: 32px;
+}
+
+.detail .display-error-container p {
+  padding: 12px;
+}
+
 .detail .pizza-detail .circle-option {
   width: 40px;
   height: 40px;
