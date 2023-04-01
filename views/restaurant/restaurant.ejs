@@ -1,3 +1,5 @@
+<%- include('../restaurant/partials/header') %> <%-
+include('../restaurant/partials/nav-bar') %>
 <section class="faq">
   <h1 class="section-heading">Orders</h1>
 
@@ -62,44 +64,53 @@
           </div>
         </div>
         <div class="border-left"></div>
-    
-                    <!-- customer info -->
-                    <div class="cust-detail-container">
-    
-                        <div>
-                            <h5>Customer Detail</h5>
-                            <% const address = order.address %>
-                            <div>
-                                <div class="cols">
-                                    <p class="cust-name"><%= address.firstname %> <%= address.lastname %></p>
-                                    <div class="d-flex align-items-center">
-                                        <i class="fa-solid fa-location-dot me-2"></i>
-                                        <p><%= address.address %> <%= address.city %> <%= address.postcode %></p>
-                                    </div>
-                                </div>
-    
-                                <div class="cols">
-                                    <div class="each-status">
-                                        <p class="status">Status</p>
-                                        <p><%= order.status.status %></p>
-                                    </div>
-    
-                                    <div>
-                                        <p class="date">Date</p>
-                                        <p><%= date %></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-    
-                        <div class="status-btn">
-                            <a href="/delete-order/<%=order._id%>"><button class="btn btn-outline-danger">Cancel Order</button></a>
-                            <a href="/update-order/<%=order._id%>"><button class="btn btn-success">Accept Order</button></a>
-                        </div>
-                    </div>
 
+        <!-- customer info -->
+        <div class="cust-detail-container">
+          <div>
+            <h5>Customer Detail</h5>
+            <% const address = order.address %>
+            <div>
+              <div class="cols">
+                <p class="cust-name">
+                  <%= address.firstname %> <%= address.lastname %>
+                </p>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-location-dot me-2"></i>
+                  <p>
+                    <%= address.address %> <%= address.city %> <%=
+                    address.postcode %>
+                  </p>
+                </div>
+              </div>
+
+              <div class="cols">
+                <div class="each-status">
+                  <p class="status">Status</p>
+                  <p><%= order.status.status %></p>
+                </div>
+
+                <div>
+                  <p class="date">Date</p>
+                  <p><%= date %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-btn">
+            <a href="/delete-order/<%=order._id%>"
+              ><button class="btn btn-outline-danger">Cancel Order</button></a
+            >
+            <a href="/update-order/<%=order._id%>"
+              ><button class="btn btn-success">Accept Order</button></a
+            >
+          </div>
+        </div>
+      </div>
     </div>
     <% }) %>
   </div>
 </section>
+
+<%- include('../restaurant/partials/footer') %>
