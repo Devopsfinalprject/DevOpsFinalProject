@@ -33,3 +33,20 @@ p {
 .questions-container h4 {
   font-size: 26px;
 }
+.question .show-detail {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #321831;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  margin-top: 15px;
+  border-radius: 6px;
+}
