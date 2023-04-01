@@ -90,7 +90,10 @@
                     </div>
                 </div>
             </div>
-
+            <div class="status-btn">
+                <a href="/restaurant/delete-order/<%=order._id%>"><button class="btn btn-outline-danger">Cancel Order</button></a>
+                <a href="/restaurant/update/<%= order.status.name %>/<%=order._id%>"><button class="btn btn-success"><%= order.status.name %> Order</button></a>
+            </div>
         </div>
 
 
