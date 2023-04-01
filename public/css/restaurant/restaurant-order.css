@@ -266,4 +266,16 @@ p {
   body {
     margin-left: 0 !important;
   }
+  .detail {
+    flex-direction: column;
+  }
+  .detail .order-detail-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 10px;
+  }
+  .detail .cust-info {
+    flex-direction: column;
+  }
 }
