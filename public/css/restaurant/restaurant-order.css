@@ -179,3 +179,6 @@ p {
 .detail .order-detail-container .total-price {
   align-items: end;
 }
+.detail .cust-detail-container .cols {
+  margin: 30px 0;
+}
