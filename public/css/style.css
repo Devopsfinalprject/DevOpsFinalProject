@@ -268,6 +268,11 @@ a .bottom-nav-list {
   padding-top: 10%;
   font-weight: 700;
 }
+.pizza-promote p {
+  color: #fff;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 70px;
+}
 
 .current-category {
   color: #fff !important;
