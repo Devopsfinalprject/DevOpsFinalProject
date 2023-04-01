@@ -300,6 +300,11 @@ app.get("/detail/:food", function (req, res) {
   });
 });
 
+// user account
+app.get("/more", Authen.authentication, function (req, res) {
+  res.render("more", { pageName: "Account" });
+});
+
 // add quantity filter
 if (typeof window !== "undefined") {
   const minusBtn = document.querySelector(
