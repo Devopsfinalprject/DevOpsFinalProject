@@ -74,3 +74,6 @@ p {
 .question .show-detail i.rotate {
   transform: none;
 }
+.questions-container h4 {
+  margin-bottom: 20px;
+}
