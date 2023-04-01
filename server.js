@@ -427,6 +427,13 @@ app.get("/reduce-this-qty/:id", (req, res) => {
   res.redirect("/detail/" + req.params.id);
 });
 
+// add individule item to cart
+app.get("/add-this-to-cart/:id/:qty", async function (req, res) {
+  let productId = req.params.id;
+  let productQty = parseInt(req.params.qty);
+  let cart = new Cart(req.session.cart ? req.session.cart : {});
+});
+
 // retaurant side
 
 app.get("/admin/signup", function (req, res) {
