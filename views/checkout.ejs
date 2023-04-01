@@ -47,35 +47,13 @@ include('./templates/top-path') %>
           </div>
           <% }) %>
 
-          <div class="order-row">
-            <div class="col">
-              <div class="food-name">
-                <b>2x</b>
-                <p>Chicken Trio</p>
-              </div>
-              <p>51.80</p>
-            </div>
-            <div class="size">Size: 28 cm</div>
-          </div>
-
-          <div class="order-row">
-            <div class="col">
-              <div class="food-name">
-                <b>2x</b>
-                <p>Chicken Trio</p>
-              </div>
-              <p>51.80</p>
-            </div>
-            <div class="size">Size: 28 cm</div>
-          </div>
-
           <!-- total section -->
 
           <div class="underline"></div>
 
           <div class="col main">
             <b>Subtotal</b>
-            <p>51.80</p>
+            <p>£<%= total.toFixed(2) %></p>
           </div>
 
           <div class="underline"></div>
@@ -89,7 +67,7 @@ include('./templates/top-path') %>
 
           <div class="col main">
             <b>Order Total</b>
-            <p>51.80</p>
+            <p>£<%= total.toFixed(2) %>/p></p>
           </div>
 
           <button class="btn btn-success" type="submit">Place Order</button>
@@ -98,4 +76,8 @@ include('./templates/top-path') %>
     </div>
   </main>
 </form>
-<%- include('footer') %>
+<%- include('./templates/footer') %>
+<script>
+  document.getElementById("moto-icon-hide").style.display = "none";
+  document.querySelectorAll(".bottom-nav li")[3].style.color = "white";
+</script>
