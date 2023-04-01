@@ -55,3 +55,12 @@ p {
   transform: rotate(180deg);
   transition: all 0.3s;
 }
+.question .detail {
+  background-color: #fff;
+  font-size: 14px;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.6;
+  overflow: hidden;
+  border: 1px solid #d9d9d9;
+}
