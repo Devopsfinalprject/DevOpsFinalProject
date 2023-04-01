@@ -247,3 +247,6 @@ p {
 .detail .tracking h5 {
   margin-bottom: 20px;
 }
+.bottom-nav {
+  display: none;
+}
