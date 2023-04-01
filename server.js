@@ -1,10 +1,27 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
-var _ = require("lodash");
+
+const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
+
+var _ = require("lodash");
+
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+
+// Database connection
+require("./config/db").connect();
+
+//Schema models
+const listItem = require("./model/listItem");
+const Category = listItem.Category;
+const Food = listItem.Food;
+const Status = listItem.Status;
+const setDefault = require("./model/setDefault");
+const User = require("./model/user").User;
+const Admin = require("./model/user").Admin;
+const Address = require("./model/user").Address;
+const Order = require("./model/order");
 
 app.get("/", function (req, res) {
   // res.sendFile(__dirname + "/index.html");
@@ -220,16 +237,6 @@ if (typeof window !== "undefined") {
     quantityDisplay.textContent = quantity;
   });
 }
-
-//Schema models
-const listItem = require("./model/listItem");
-const Category = listItem.Category;
-const Food = listItem.Food;
-const Status = listItem.Status;
-const setDefault = require("./model/setDefault");
-const User = require("./model/user").User;
-const Address = require("./model/user").Address;
-const Order = require("./model/order");
 
 // add categories details
 if (typeof window !== "undefined") {
