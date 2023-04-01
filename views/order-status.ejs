@@ -134,4 +134,26 @@ include('./templates/top-path') %>
         // hide control container
         control.hide();
 </script>
-<%- include('./templates/footer') %>
+<!-- display the progress bar due to the order status -->
+<% if(status.name === "Queue") { %>
+<script>
+  progressBar.querySelectorAll("li")[0].classList.add("is-active");
+</script>
+<% }else if(status.name === "Cook") { %>
+<script>
+  progressBar.querySelectorAll("li")[0].classList.add("is-complete");
+</script>
+<script>
+  progressBar.querySelectorAll("li")[1].classList.add("is-active");
+</script>
+<% }else if(status.name === "Delivery" || status.name === "Complete") { %>
+<script>
+  progressBar.querySelectorAll("li")[0].classList.add("is-complete");
+</script>
+<script>
+  progressBar.querySelectorAll("li")[1].classList.add("is-complete");
+</script>
+<script>
+  progressBar.querySelectorAll("li")[2].classList.add("is-active");
+</script>
+<% } %> <%- include('./templates/footer') %>
