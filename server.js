@@ -61,6 +61,16 @@ app.post("/user/signup", async function (req, res) {
     lat,
     lon,
   } = req.body;
+  const newAddress = new Address({
+    firstname: firstname,
+    lastname: lastname,
+    address: address,
+    city: city,
+    phone: phone,
+    postcode: postcode,
+    lat: lat,
+    lon: lon,
+  });
 });
 
 app.post("/user/signin", async function (req, res) {
