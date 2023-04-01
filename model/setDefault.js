@@ -1,4 +1,6 @@
 const listItem = require("./listItem");
+const Food = listItem.Food;
+
 // All default categories
 const pizza = new Category({ name: "Pizza", icon: "pizza-slice" });
 const appetizer = new Category({ name: "Appetizer", icon: "bread-slice" });
@@ -12,5 +14,116 @@ const setCategory = () => {
 
   Category.insertMany(defaultCategories)
     .then(() => console.log("Add all the categories succussfuly"))
+    .catch((err) => console.log(err));
+};
+
+// foods
+const setFood = () => {
+  // All default foods
+  const pizza1 = new Food({
+    name: "Chicken Trio",
+    description:
+      "BBQ Chicken, Garlic Buttered Chicken, Roasted Chicken, Mushroom, Red&Green Chili and Pizza Sauce",
+    category: pizza,
+    price: 19.9,
+  });
+
+  const pizza2 = new Food({
+    name: "Seafood Cocktail",
+    description:
+      "Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce",
+    category: pizza,
+    price: 23.9,
+  });
+
+  const pizza3 = new Food({
+    name: "Double Pepperoni",
+    description: "Pepperoni and Pizza Sauce",
+    category: pizza,
+    price: 22.9,
+  });
+
+  const pizza4 = new Food({
+    name: "Hawaiian",
+    description: "Ham, Bacon, Pineapple and Pizza Sauce",
+    category: pizza,
+    price: 21.9,
+  });
+
+  const pizza5 = new Food({
+    name: "Meat Deluxe",
+    description:
+      "Ham, Bacon, Pepperoni, Smoked Sausage, Italian Sausage, Bacon Dice and Pizza Sauce",
+    category: pizza,
+    price: 25.9,
+  });
+
+  const pizza6 = new Food({
+    name: "Tom Yum Kung",
+    description: "Shrimp, Squid, Mushroom and Tom Yum Sauce",
+    category: pizza,
+    price: 25.9,
+  });
+
+  const pasta1 = new Food({
+    name: "Ham & Mushroom Spaghetti in Alfredo Sauce",
+    category: pasta,
+    price: 17.9,
+  });
+  const pasta2 = new Food({
+    name: "Pork Bolognese",
+    category: pasta,
+    price: 16.9,
+  });
+  const chicken1 = new Food({
+    name: "Honey Chicken Wings",
+    category: chicken,
+    price: 15.9,
+  });
+  const chicken2 = new Food({
+    name: "BBQ Chicken Wings",
+    category: chicken,
+    price: 16.9,
+  });
+  const appetizer1 = new Food({
+    name: "Cheese Sticks",
+    category: appetizer,
+    price: 14.9,
+  });
+  const appetizer2 = new Food({
+    name: "Calamari",
+    category: appetizer,
+    price: 13.9,
+  });
+  const drink1 = new Food({
+    name: "Coke",
+    category: drinks,
+    price: 5.9,
+  });
+  const drink2 = new Food({
+    name: "Coke (NO SUGAR)",
+    category: drinks,
+    price: 6.9,
+  });
+
+  const defaultFoods = [
+    pizza1,
+    pizza2,
+    pizza3,
+    pizza4,
+    pizza5,
+    pizza6,
+    pasta1,
+    pasta2,
+    chicken1,
+    chicken2,
+    appetizer1,
+    appetizer2,
+    drink1,
+    drink2,
+  ];
+
+  Food.insertMany(defaultFoods)
+    .then(() => console.log("Add all the foods succussfuly"))
     .catch((err) => console.log(err));
 };
