@@ -112,3 +112,8 @@ p {
   display: flex !important;
   flex-direction: row !important;
 }
+#order-status .head p {
+  color: #9fa19a;
+  font-size: 14px;
+  font-weight: 500;
+}
