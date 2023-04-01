@@ -391,6 +391,10 @@ a .bottom-nav-list {
   margin-left: 10px !important;
 }
 
+.detail .pizza-con-main .detail-pizza-img {
+  width: 45%;
+  height: 100%;
+}
 .detail .pizza-con-main img {
   width: 45%;
   margin-left: 5%;
