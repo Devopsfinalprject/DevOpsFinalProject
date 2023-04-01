@@ -25,3 +25,8 @@ p {
   font-size: 35px;
   margin-bottom: 50px;
 }
+
+.questions-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
