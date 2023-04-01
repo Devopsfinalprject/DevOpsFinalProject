@@ -1,6 +1,16 @@
 <%- include('./templates/head') %> <%- include('./templates/header') %> <%-
 include('category-bar') %>
 
+<main class="detail">
+  <div
+  class="detail-top justify-content-between pb-3 mb-3 d-flex flex-row align-items-center"
+>
+  <a href="/"><p class="pl-4">Home</p></a>
+  <i class="fa-solid fa-xs fa-angle-right"></i>
+ <div class="cate-top"><a href="/menu/<%= categoryId %>"> <%= category %></a></div>
+  <i class="fa-solid fa-xs fa-angle-right"></i>
+  <p><%= name %></p>
+</div>
   <!-- add more detail of particualr menu such as size, price, quantity and recommandation menu -->
       <div class="row">
         <% pizzas.forEach( pizza => { %> <% let cateName =
@@ -29,5 +39,6 @@ include('category-bar') %>
       </div>
       <% }) %>
   </div>
+</main>
 
 <%- include('./templates/footer') %>
