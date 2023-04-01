@@ -290,4 +290,15 @@ p {
     background-color: #bf0b26;
     justify-content: center;
   }
+  .bottom-nav ul {
+    display: inline-flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 60%;
+    text-align: center;
+    color: #e0929d;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
 }
