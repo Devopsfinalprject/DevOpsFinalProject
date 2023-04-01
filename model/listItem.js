@@ -14,3 +14,10 @@ const addressSchema = new mongoose.Schema({
   postcode: String,
   orderNote: String,
 });
+
+const foodSchema = new mongoose.Schema({
+  name: String,
+  description: String,
+  price: Number,
+  category: [categorySchema],
+});
