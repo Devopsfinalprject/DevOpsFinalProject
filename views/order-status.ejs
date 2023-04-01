@@ -43,5 +43,22 @@ include('./templates/top-path') %>
       <p>Delivered</p>
     </li>
   </ol>
+  <!-- display when order status is delivery -->
+  <% if(status.name === "Delivery" || status.name === "Complete") { %>
+  <!-- customer's shipping information -->
+  <div class="shipped">
+    <div>
+      <h5>SHIPPING INFORMATION</h5>
+      <p>
+        <%= address.firstname %> <%= address.lastname %><br />
+        <%= address.address %> <br />
+        <%= address.city %>, <%= address.postcode %> <br />
+        <%= address.phone %>
+      </p>
+    </div>
+
+    <div id="map" style="height: 180px; width: 700px"></div>
+  </div>
+  <% } %>
 </main>
 <%- include('footer') %>
