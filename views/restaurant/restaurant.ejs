@@ -1,0 +1,35 @@
+<section class="faq">
+  <h1 class="section-heading">Orders</h1>
+
+  <div class="questions-container">
+    <h4>Recent order</h4>
+
+    <%- include('../restaurant/partials/order-status-bar') %>
+    <!-- foreach order -->
+    <% orders.forEach(order => { %>
+    <div class="question">
+      <button class="show-detail">
+        <div class="order-head-detail">
+          <span class="order-number">Order #<%= order._id %></span>
+          <!-- format date -->
+          <% const options = { year: "numeric", month: "long", day: "numeric",
+          }; let time = order.date.toLocaleTimeString('en-US', { hour:
+          "2-digit", minute: "2-digit" }); let date =
+          order.date.toLocaleString('en-US',options); %>
+          <span class="order-date"><%= date %>, <%= time %></span>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <p class="order-total">£<%= order.cart.totalPrice.toFixed(2) %></p>
+
+          <div
+            class="show-icon d-flex align-items-center justify-content-center"
+          >
+            <i class="fas fa-chevron-up"></i>
+          </div>
+        </div>
+      </button>
+    </div>
+    <% }) %>
+  </div>
+</section>
