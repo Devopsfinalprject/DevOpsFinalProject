@@ -228,3 +228,7 @@ p {
 .detail .status-btn .btn-success {
   margin-left: 10px;
 }
+
+.order-date.show {
+  color: #fff;
+}
