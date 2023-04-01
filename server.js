@@ -45,6 +45,24 @@ app.post("/orders", function (req, res) {
   res.render("order-status");
 });
 
+app.get("/checkout", Authen.authentication, async function (req, res) {
+  if (!req.session.cart) {
+    return res.redirect("/shopping-cart");
+  }
+  const userAddress = await User.findById(req.session.userId);
+
+  let cart = new Cart(req.session.cart);
+
+  // console.log(userAddress)
+
+  res.render("checkout", {
+    pageName: "Checkout",
+    total: cart.totalPrice,
+    products: cart.generateArray(),
+    addresses: userAddress.addresses,
+  });
+});
+
 // add sign up info to database
 app.post("/user/signup", async function (req, res) {
   // Get user input using bodyParser
