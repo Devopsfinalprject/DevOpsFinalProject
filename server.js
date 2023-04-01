@@ -568,6 +568,17 @@ app.get(
     });
   }
 );
+// show order by the status
+app.get(
+  "/restaurant/:status",
+  restAuthen.authentication,
+  async function (req, res) {
+    let statusId = req.params.status;
+    const foundStatus = await Status.find({});
+    const foundOrder = await Order.find({});
+    const thisStatus = await Status.findOne({ _id: statusId });
+  }
+);
 
 app.listen(9000, function () {
   console.log("Server run on port 9000");
