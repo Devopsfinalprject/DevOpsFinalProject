@@ -169,9 +169,6 @@ app.get("/user/signup", function (req, res) {
   res.render("user/signup");
 });
 
-app.get("/user/signin", function (req, res) {
-  res.render("user/signin");
-});
 // add sign up info to database
 app.post("/user/signup", async function (req, res) {
   // Get user input using bodyParser
