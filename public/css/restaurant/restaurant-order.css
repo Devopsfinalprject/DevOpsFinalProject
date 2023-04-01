@@ -137,3 +137,6 @@ p {
 .show-detail .order-total.show {
   color: #fff;
 }
+.show-icon.show {
+  background: rgba(255, 255, 255, 0.2);
+}
