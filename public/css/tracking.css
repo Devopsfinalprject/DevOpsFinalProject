@@ -15,12 +15,11 @@
 
 #tracking .tracking-input {
   display: flex;
-  flex-direction: column;
 }
 
 #tracking .tracking-input input {
   box-sizing: border-box;
-  width: 359px;
+  width: 489px;
   height: 33px;
   background: #ffffff;
   border: 0.5px solid #9da3a7;
@@ -37,7 +36,8 @@
   width: 134px;
   height: 36px;
   border-radius: 50px;
-  margin-top: 5%;
+  margin-top: 20%;
+  margin-left: 10px;
 }
 
 /* more */
