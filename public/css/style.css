@@ -463,3 +463,10 @@ a .bottom-nav-list {
 .row {
   --bs-gutter-x: 0rem;
 }
+
+/* restaurant */
+.admin-login {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+}
