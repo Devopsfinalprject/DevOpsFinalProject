@@ -29,6 +29,19 @@ const MongoStore = require("connect-mongo");
 const Authen = require("./control/authen");
 const restAuthen = require("./control/restAuthen");
 
+// set session
+app.use(
+  session({
+    secret: "mysupersecret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 3600000 }, //one hour
+    store: MongoStore.create({
+      mongoUrl: "mongodb://127.0.0.1:27017/EAT247",
+    }),
+  })
+);
+
 app.get("/", function (req, res) {
   // res.sendFile(__dirname + "/index.html");
   res.render("index", {
