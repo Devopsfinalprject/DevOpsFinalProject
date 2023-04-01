@@ -33,8 +33,19 @@ include('category-bar') %>
       />
       <h4><%= pizza.name %></h4>
       <p class="price">£<%= pizza.price %></p>
+
       <div>
-        <button class="btn btn-outline-secondary">Add to cart</button>
+        <a href="/add-to-cart/<%= pizza._id %>"
+          ><button class="btn btn-outline-secondary addToCart">
+            <img
+              src="img/icon/shopping-bag.svg"
+              alt="shopping-bag"
+              width="10px"
+            />
+            Add to cart
+          </button></a
+        >
+
         <button class="btn btn-success">Buy now</button>
       </div>
     </a>
