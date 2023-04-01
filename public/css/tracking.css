@@ -97,6 +97,15 @@
 }
 /* more */
 
+/* shipped */
+
+#order-status .shipped,
+#more .col {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
 #more {
   margin: 3%;
   display: flex;
