@@ -145,6 +145,11 @@ a .bottom-nav-list {
   font-size: 20px;
   color: #bf0b26;
   margin-bottom: 20px !important;
+  font-weight: 600;
+}
+
+.detail .pizza-detail #detail-price {
+  color: #bf0b26;
 }
 
 .pizza-promote {
