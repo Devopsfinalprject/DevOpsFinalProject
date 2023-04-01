@@ -261,3 +261,9 @@ p {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 765px) {
+  body {
+    margin-left: 0 !important;
+  }
+}
