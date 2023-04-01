@@ -82,6 +82,11 @@
   z-index: 1000;
 }
 
+#order-status .pot-icon {
+  bottom: 35px;
+  left: 0px;
+}
+
 /* more */
 
 #more {
