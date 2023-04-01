@@ -624,6 +624,22 @@ app.get(
     res.redirect("/restaurant/" + path);
   }
 );
+// update delivery's order status
+app.get(
+  "/restaurant/update/Delivery/:orderId",
+  restAuthen.authentication,
+  async function (req, res) {
+    let orderId = req.params.orderId;
+    // search status to update to order's status
+    const status = await Status.find({ name: "Complete" });
+    const queue = await Status.find({ name: "Queue" });
+    const path = queue[0]._id;
+
+    const update = { status: status[0] };
+    await Order.findByIdAndUpdate({ _id: orderId }, update);
+    res.redirect("/restaurant/" + path);
+  }
+);
 
 app.listen(9000, function () {
   console.log("Server run on port 9000");
