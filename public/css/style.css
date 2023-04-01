@@ -221,8 +221,17 @@ a .bottom-nav-list {
     flex-direction: column !important;
     margin-left: 120px !important;
   }
-  .pizza-con-main img {
+  .pizza-con-main .detail-pizza-img {
     width: 100% !important;
+  }
+  .detail .pizza-detail {
+    width: 450px !important;
+  }
+  .detail-top {
+    display: none !important;
+  }
+  #more .col {
+    margin: 10px 0;
   }
 }
 
