@@ -42,3 +42,14 @@ include('category-bar') %>
 
 <!-- footer -->
 <%- include('./templates/footer') %>
+
+<!-- change current category menu color -->
+<script>
+  document.querySelector(
+    ".fa-<%=currentCategory.icon%>"
+  ).parentElement.parentElement.style.color = "#FFF";
+
+  // [mobile ver.] change current path icon to white
+  document.querySelectorAll(".bottom-nav li")[1].style.color = "white";
+  document.getElementById("moto-icon-hide").style.display = "none";
+</script>
