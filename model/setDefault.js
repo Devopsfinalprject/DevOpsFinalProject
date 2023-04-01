@@ -1,6 +1,7 @@
 const listItem = require("./listItem");
 const Category = listItem.Category;
 const Food = listItem.Food;
+const Status = listItem.Status;
 
 // All default categories
 const pizza = new Category({ name: "Pizza", icon: "pizza-slice" });
@@ -126,5 +127,36 @@ const setFood = () => {
 
   Food.insertMany(defaultFoods)
     .then(() => console.log("Add all the foods succussfuly"))
+    .catch((err) => console.log(err));
+};
+
+// order status
+const setOrderStatus = () => {
+  // All default order's status
+  const queue = new Status({
+    name: "Queue",
+    status: "Order placed",
+    description: "We are now preparing your Pizza",
+  });
+  const cook = new Status({
+    name: "Cook",
+    status: "Order cooked",
+    description: "We are now baking your Pizza",
+  });
+  const delivery = new Status({
+    name: "Delivery",
+    status: "Order deliverd",
+    description: "We are now delivering your Pizza",
+  });
+  const complete = new Status({
+    name: "Complete",
+    status: "Order completed",
+    description: "Your order is complete",
+  });
+
+  const defaultStatus = [queue, cook, delivery, complete];
+
+  Status.insertMany(defaultStatus)
+    .then(() => console.log("Add all the order's status succussfuly"))
     .catch((err) => console.log(err));
 };
