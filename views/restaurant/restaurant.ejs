@@ -114,3 +114,26 @@ include('../restaurant/partials/nav-bar') %>
 </section>
 
 <%- include('../restaurant/partials/footer') %>
+<script>
+  // show order detail when click icon
+  const buttons = document.querySelectorAll(".show-detail");
+  const downBtn = document.querySelectorAll(".fa-chevron-up");
+  const showIcon = document.querySelectorAll(".show-icon");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      if (e.target.nodeName === "BUTTON") {
+        const para = e.target.nextElementSibling;
+        const icon = e.target.querySelector("i");
+        const orderDate = e.target.querySelector(".order-date");
+
+        para.classList.toggle("show");
+        icon.classList.toggle("rotate");
+        button.classList.toggle("show");
+        orderDate.classList.toggle("show");
+        e.target.querySelector(".show-icon").classList.toggle("show");
+        e.target.querySelector(".order-total").classList.toggle("show");
+      }
+    });
+  });
+</script>
