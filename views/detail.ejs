@@ -1,16 +1,17 @@
 <%- include('./templates/head') %> <%- include('./templates/header') %> <%-
 include('category-bar') %>
-<main class="detail">
+
   <!-- add more detail of particualr menu such as size, price, quantity and recommandation menu -->
-    <a href="/detail">
       <div class="row">
-        <% let i = 0;%> <% pizzas.forEach( (pizza, i) => { %> <% if(i < 3) { %>
+        <% pizzas.forEach( pizza => { %> <% let cateName =
+          pizza.category[0].name %>
         <div
           class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center pizza mt-5"
         >
+         <a href="/detail/<%= pizza._id %>"></a>
           <img
             class="pizza-img"
-            src="../img/PIZZA/<%= pizza.name %>.png"
+            src="img/<%= cateName %>/<%= pizza.name %>.png"
             alt="pizza-img"
           />
           <h4><%= pizza.name %></h4>
@@ -21,10 +22,9 @@ include('category-bar') %>
             <button class="btn btn-success">Buy now</button>
           </div>
         </div>
-        <% i++ } %> <% }) %>
+    
       </div>
-    </a>
+      <% }) %>
   </div>
-</main>
 
 <%- include('./templates/footer') %>
