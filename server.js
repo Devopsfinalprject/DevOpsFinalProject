@@ -45,9 +45,22 @@ app.post("/orders", function (req, res) {
   res.render("order-status");
 });
 
-app.get("/signup", function (req, res) {
-  // res.sendFile(__dirname + "/index.html");
-  res.render("register");
+// add sign up info to database
+app.post("/user/signup", async function (req, res) {
+  // Get user input using bodyParser
+  const {
+    username,
+    email,
+    password,
+    firstname,
+    lastname,
+    phone,
+    address,
+    postcode,
+    city,
+    lat,
+    lon,
+  } = req.body;
 });
 
 app.post("/user/signin", async function (req, res) {
