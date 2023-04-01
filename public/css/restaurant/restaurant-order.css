@@ -147,3 +147,6 @@ p {
   margin: 20px 0;
   font-size: 12px;
 }
+.detail .order-detail-container .item .cols {
+  margin: 5px 0;
+}
