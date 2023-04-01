@@ -640,6 +640,20 @@ app.get(
     res.redirect("/restaurant/" + path);
   }
 );
+// delete order
+app.get(
+  "/restaurant/delete-order/:orderId",
+  restAuthen.authentication,
+  async (req, res) => {
+    let orderId = req.params.orderId;
+    const queue = await Status.find({ name: "Queue" });
+    const path = queue[0]._id;
+
+    await Order.findOneAndDelete(orderId).exec();
+
+    res.redirect("/restaurant/" + path);
+  }
+);
 
 app.listen(9000, function () {
   console.log("Server run on port 9000");
