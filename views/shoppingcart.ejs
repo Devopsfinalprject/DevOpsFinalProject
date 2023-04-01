@@ -30,13 +30,16 @@ include('./templates/top-path') %>
       <b>Price</b>
       <b>Quantity</b>
       <b>Subtotal</b>
+      <% products.forEach((product) => { %>
 
       <div class="product-detail">
-        <div><i class="fa-solid fa-xmark"></i></div>
+        <a href="/remove/<%= product.item._id %>">
+          <div><i class="fa-solid fa-xmark"></i></div>
+        </a>
 
         <div class="product-img">
           <img
-            src="https://cdn.1112.com/1112/public//images/products/pizza/Oct2021/162217_MCT.png"
+            src="../img/<%= product.item.category[0].name %>/<%= product.item.name %>.png"
             alt=""
           />
         </div>
