@@ -102,6 +102,23 @@ app.get("/menu/:category", async (req, res) => {
     currentCategory: foundCategory,
   });
 });
+
+// add item to cart
+app.get("/add-to-cart/:id", async function (req, res) {
+  let productId = req.params.id;
+  let cart = new Cart(req.session.cart ? req.session.cart : {});
+
+  const product = await Food.findById(productId);
+  if (!product) {
+    return res.redirect("/");
+  } else {
+    cart.add(product, product.id);
+    req.session.cart = cart;
+    // console.log(req.session.cart);
+    res.redirect("/");
+  }
+});
+
 app.get("/order-complete", function (req, res) {
   res.render("order-complete");
 });
