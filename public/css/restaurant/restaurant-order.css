@@ -117,3 +117,9 @@ p {
   font-size: 14px;
   font-weight: 500;
 }
+.show-detail.show {
+  background-color: #bf0b26;
+  border: none;
+  border-radius: 6px 6px 0px 0px;
+  color: #fff;
+}
