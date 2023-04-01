@@ -281,4 +281,13 @@ p {
   #rest-left-nav {
     display: none;
   }
+  .bottom-nav {
+    display: flex;
+    padding-bottom: 20px !important;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #bf0b26;
+    justify-content: center;
+  }
 }
