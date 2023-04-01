@@ -64,6 +64,11 @@ app.get("/", async (req, res) => {
   const status = await Status.find({});
   const pizzaId = await Category.find({ name: "Pizza" }, { _id: 1 });
   req.session.currentQty = 1;
+
+  // find pizza id and store to session to be a link of menu
+  pizzaId.forEach((pizza) => {
+    req.session.menuLink = pizza._id;
+  });
 });
 
 app.get("/detail", function (req, res) {
