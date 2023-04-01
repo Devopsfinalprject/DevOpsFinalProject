@@ -307,4 +307,7 @@ p {
   .bottom-nav a {
     color: #e0929d;
   }
+  #more .col {
+    width: 100%;
+  }
 }
