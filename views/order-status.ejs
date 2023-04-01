@@ -103,5 +103,35 @@ include('./templates/top-path') %>
   var restaurantMarker =  L.marker([18.800761219810965, 98.95029908488856], {icon: restIcon}).addTo(map);
         var restaurantMarker =  L.marker([18.800761219810965, 98.95029908488856], {icon: taxiIcon}).addTo(map);
         var customerMarket =  L.marker([+<%= address.lat %>, <%= address.lon %>], {icon: custIcon}).addTo(map);
+
+           // add line between location
+           let control = L.Routing.control({
+            waypoints: [
+                L.latLng(18.800761219810965, 98.95029908488856),
+                L.latLng(+<%= address.lat %>, <%= address.lon %>)
+            ],
+            routeWhileDragging: true,
+            lineOptions: {
+                styles: [{ color: '#5F5F5F', opacity: 1, weight: 3 }]
+            },
+            createMarker: function(i, waypoints, n){
+                return L.marker(dStart.latLng, {
+                                    draggable: true,
+                                    bounceOnAdd: true,
+                                    bounceOnAddOptions: {duration: 1000, height: 800, function(){(popup.openOn(map))}},
+
+                icon: redMarker}).bindPopup(poppi).openPopup();
+                    },
+        }).on('routesfound', function(e) {
+                console.log(e)
+                e.routes[0].coordinates.forEach((coord, index) => {
+                    setTimeout(()=> {
+                        restaurantMarker.setLatLng([coord.lat, coord.lng])
+                    }, 100 * index)
+                });
+            }).addTo(map);
+
+        // hide control container
+        control.hide();
 </script>
 <%- include('./templates/footer') %>
