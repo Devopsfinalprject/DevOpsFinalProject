@@ -197,4 +197,7 @@
   #more .col {
     margin: 50px 0 20px 50px;
   }
+  .display-error-container {
+    width: 85%;
+  }
 }
