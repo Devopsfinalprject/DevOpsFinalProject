@@ -116,6 +116,23 @@ app.post("/orders", async function (req, res) {
     req.session.errorMsg = "Sorry, the order could not be found.";
     res.redirect("/orders");
   });
+  // if order were found
+  if (foundedOrder) {
+    if (foundedOrder.length == 0) {
+      req.session.errorMsg = "Sorry, the order could not be found.";
+      res.redirect("/orders");
+    } else {
+      // select found order
+      foundedOrder = foundedOrder[0];
+
+      const options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      };
+      let date = foundedOrder.date.toLocaleString("en-US", options);
+    }
+  }
 });
 
 app.get("/checkout", Authen.authentication, async function (req, res) {
