@@ -19,6 +19,8 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 3%;
+  align-items: center;
+  width: 100%;
 }
 
 #register .address-container .first {
