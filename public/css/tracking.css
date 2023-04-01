@@ -95,7 +95,6 @@
   font-weight: 600;
   font-size: 15px;
 }
-/* more */
 
 /* shipped */
 
@@ -117,6 +116,7 @@
   height: 100%;
 }
 
+/* more */
 #more {
   margin: 3%;
   display: flex;
@@ -167,6 +167,18 @@
 @media screen and (max-width: 600px) {
   #tracking p {
     width: 425px;
+  }
+  #tracking .tracking-input {
+    flex-direction: column;
+  }
+  #tracking .tracking-input input {
+    width: 425px;
+  }
+  #tracking .tracking-input .d-flex {
+    flex-direction: column;
+  }
+  #tracking .tracking-input .btn-success {
+    margin-top: 20px;
   }
   #order-status .customer-info {
     width: 500px !important;
