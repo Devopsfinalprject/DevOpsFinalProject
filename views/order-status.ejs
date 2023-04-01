@@ -99,5 +99,9 @@ include('./templates/top-path') %>
     iconUrl: "../img/icon/red-point.png",
     iconSize: [12, 12],
   });
+  // add market
+  var restaurantMarker =  L.marker([18.800761219810965, 98.95029908488856], {icon: restIcon}).addTo(map);
+        var restaurantMarker =  L.marker([18.800761219810965, 98.95029908488856], {icon: taxiIcon}).addTo(map);
+        var customerMarket =  L.marker([+<%= address.lat %>, <%= address.lon %>], {icon: custIcon}).addTo(map);
 </script>
 <%- include('./templates/footer') %>
