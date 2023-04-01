@@ -266,6 +266,7 @@ a .bottom-nav-list {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 100px;
   padding-top: 10%;
+  font-weight: 700;
 }
 
 .current-category {
