@@ -46,6 +46,8 @@ app.use(function (req, res, next) {
   next();
 });
 
+const Cart = require("./model/cart");
+
 app.get("/", function (req, res) {
   // res.sendFile(__dirname + "/index.html");
   res.render("index", {
