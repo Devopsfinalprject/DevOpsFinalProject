@@ -1,179 +1,194 @@
 <%- include('./templates/head') %> <%- include('./templates/header') %>
 include('./templates/top-path') %>
-<form action="/checkout" method="post">
-  <main id="checkout">
-    <!-- progress bar -->
-    <ol class="progress-bar">
-      <li class="is-active" data-step="1">Shopping Cart</li>
-      <li data-step="2">Checkout</li>
-      <li data-step="3" class="progress__last">Order Placed</li>
-    </ol>
-    <div id="show-cart">
-      <!-- items -->
-      <div class="test-product">
-        <b>Product</b>
-        <b>Price</b>
-        <b>Quantity</b>
-        <b>Subtotal</b>
 
-        <div class="product-detail">
-          <div><i class="fa-solid fa-xmark"></i></div>
+<main id="checkout">
+  <!-- progress bar -->
+  <ol class="progress-bar">
+    <li class="is-active" data-step="1">Shopping Cart</li>
+    <li data-step="2">Checkout</li>
+    <li data-step="3" class="progress__last">Order Placed</li>
+  </ol>
+  <% if(products) { %>
 
-          <div class="product-img">
-            <img
-              src="https://cdn.1112.com/1112/public//images/products/pizza/Oct2021/162217_MCT.png"
-              alt=""
-            />
-          </div>
+  <!-- check it cart is empty -->
+  <% if(products.length < 1) { %>
+  <section id="cart-empty">
+    <div class="noti">
+      <div class="left"></div>
+      <p>Your cart is currently empty.</p>
+    </div>
 
-          <div class="product-name">
-            <h3>Chicken Trio</h3>
-            <p>Size: 28 cm</p>
+    <a href="/"><button class="btn btn-danger">Return to shop</button></a>
+  </section>
+  <% } else { %>
+
+  <!-- <form action="" method="post"> -->
+  <div id="show-cart">
+    <!-- items -->
+    <div class="test-product">
+      <b>Product</b>
+      <b>Price</b>
+      <b>Quantity</b>
+      <b>Subtotal</b>
+
+      <div class="product-detail">
+        <div><i class="fa-solid fa-xmark"></i></div>
+
+        <div class="product-img">
+          <img
+            src="https://cdn.1112.com/1112/public//images/products/pizza/Oct2021/162217_MCT.png"
+            alt=""
+          />
+        </div>
+
+        <div class="product-name">
+          <h3>Chicken Trio</h3>
+          <p>Size: 28 cm</p>
+        </div>
+      </div>
+      <div class="col">5656</div>
+      <div class="col">
+        <div class="qty-btn">
+          <button class="minus-btn">-</button>
+          <span class="cart-num">2</span>
+          <button class="plus-btn">+</button>
+        </div>
+      </div>
+      <div class="col subtotal">556</div>
+
+      <div class="product-detail">
+        <div><i class="fa-solid fa-xmark"></i></div>
+        <div class="product-img">
+          <img
+            src="https://cdn.1112.com/1112/public//images/products/beverage/117561_3.png"
+            alt=""
+          />
+        </div>
+        <div class="product-name">
+          <h3>Coke</h3>
+          <p>Size: 250 ml.</p>
+        </div>
+      </div>
+      <div class="col">5656</div>
+      <div class="col">
+        <div class="qty-btn">
+          <button class="minus-btn">-</button>
+          <span class="cart-num">2</span>
+          <button class="plus-btn">+</button>
+        </div>
+      </div>
+      <div class="col subtotal">556</div>
+    </div>
+
+    <!-- item mobile -->
+
+    <section id="mobile-view">
+      <div>
+        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+        <div class="col">
+          <h5>Product:</h5>
+          <div>
+            <p>Chicken Trio</p>
+            <p>Size: 29 cm</p>
           </div>
         </div>
-        <div class="col">5656</div>
+
         <div class="col">
+          <h5>Price:</h5>
+          <p>25.00</p>
+        </div>
+
+        <div class="col">
+          <h5>Quantity</h5>
           <div class="qty-btn">
             <button class="minus-btn">-</button>
             <span class="cart-num">2</span>
             <button class="plus-btn">+</button>
           </div>
         </div>
-        <div class="col subtotal">556</div>
 
-        <div class="product-detail">
-          <div><i class="fa-solid fa-xmark"></i></div>
-          <div class="product-img">
-            <img
-              src="https://cdn.1112.com/1112/public//images/products/beverage/117561_3.png"
-              alt=""
-            />
-          </div>
-          <div class="product-name">
-            <h3>Coke</h3>
-            <p>Size: 250 ml.</p>
-          </div>
-        </div>
-        <div class="col">5656</div>
         <div class="col">
-          <div class="qty-btn">
-            <button class="minus-btn">-</button>
-            <span class="cart-num">2</span>
-            <button class="plus-btn">+</button>
-          </div>
+          <h5>Subtotal:</h5>
+          <p>51.70</p>
         </div>
-        <div class="col subtotal">556</div>
       </div>
 
-      <!-- item mobile -->
-
-      <section id="mobile-view">
-        <div>
-          <div class="close"><i class="fa-solid fa-xmark"></i></div>
-          <div class="col">
-            <h5>Product:</h5>
-            <div>
-              <p>Chicken Trio</p>
-              <p>Size: 29 cm</p>
-            </div>
-          </div>
-
-          <div class="col">
-            <h5>Price:</h5>
-            <p>25.00</p>
-          </div>
-
-          <div class="col">
-            <h5>Quantity</h5>
-            <div class="qty-btn">
-              <button class="minus-btn">-</button>
-              <span class="cart-num">2</span>
-              <button class="plus-btn">+</button>
-            </div>
-          </div>
-
-          <div class="col">
-            <h5>Subtotal:</h5>
-            <p>51.70</p>
+      <div>
+        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+        <div class="col">
+          <h5>Product:</h5>
+          <div>
+            <p>Chicken Trio</p>
+            <p>Size: 29 cm</p>
           </div>
         </div>
 
-        <div>
-          <div class="close"><i class="fa-solid fa-xmark"></i></div>
-          <div class="col">
-            <h5>Product:</h5>
-            <div>
-              <p>Chicken Trio</p>
-              <p>Size: 29 cm</p>
-            </div>
-          </div>
+        <div class="col">
+          <h5>Price:</h5>
+          <p>25.00</p>
+        </div>
 
-          <div class="col">
-            <h5>Price:</h5>
-            <p>25.00</p>
-          </div>
-
-          <div class="col">
-            <h5>Quantity</h5>
-            <div class="qty-btn">
-              <button class="minus-btn">-</button>
-              <span class="cart-num">2</span>
-              <button class="plus-btn">+</button>
-            </div>
-          </div>
-
-          <div class="col">
-            <h5>Subtotal:</h5>
-            <p>51.70</p>
+        <div class="col">
+          <h5>Quantity</h5>
+          <div class="qty-btn">
+            <button class="minus-btn">-</button>
+            <span class="cart-num">2</span>
+            <button class="plus-btn">+</button>
           </div>
         </div>
-      </section>
 
-      <!-- buttons -->
-      <div class="button-section">
-        <!-- <div class="coupon-btn">
+        <div class="col">
+          <h5>Subtotal:</h5>
+          <p>51.70</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- buttons -->
+    <div class="button-section">
+      <!-- <div class="coupon-btn">
           <input type="text" placeholder="Coupon code" />
           <button class="btn btn-dark">Apply coupon</button>
         </div> -->
-        <div class="checkout-btn">
-          <div>
-            <button class="btn btn-light">Update Cart</button>
-          </div>
-
-          <div>
-            <button type="submit" class="btn btn-success">
-              Proceed to Checkout
-            </button>
-          </div>
+      <div class="checkout-btn">
+        <div>
+          <button class="btn btn-light">Update Cart</button>
         </div>
-      </div>
 
-      <!-- total -->
-      <div class="cart-total">
-        <h4>Cart totals</h4>
-        <div class="total-head"></div>
-
-        <div class="col">
-          <b>Subtotal</b>
-          <p>65.00</p>
-        </div>
-        <div class="col">
-          <b>Total</b>
-          <h3>67.99</h3>
+        <div>
+          <button type="submit" class="btn btn-success">
+            Proceed to Checkout
+          </button>
         </div>
       </div>
     </div>
 
-    <section id="cart-empty">
-      <div class="noti">
-        <div class="left"></div>
-        <p>Your cart is currently empty.</p>
-      </div>
+    <!-- total -->
+    <div class="cart-total">
+      <h4>Cart totals</h4>
+      <div class="total-head"></div>
 
-      <div>
-        <a href="/"><button class="btn btn-danger">Return to shop</button></a>
+      <div class="col">
+        <b>Subtotal</b>
+        <p>65.00</p>
       </div>
-    </section>
-  </main>
-</form>
+      <div class="col">
+        <b>Total</b>
+        <h3>67.99</h3>
+      </div>
+    </div>
+  </div>
+
+  <section id="cart-empty">
+    <div class="noti">
+      <div class="left"></div>
+      <p>Your cart is currently empty.</p>
+    </div>
+
+    <div>
+      <a href="/"><button class="btn btn-danger">Return to shop</button></a>
+    </div>
+  </section>
+</main>
+
 <%- include('footer') %>
