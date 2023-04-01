@@ -25,6 +25,7 @@
 
 #register .address-container .first {
   padding-right: 3%;
+  width: 100%;
 }
 
 #register .user-info {
