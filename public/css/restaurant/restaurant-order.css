@@ -87,3 +87,8 @@ p {
 .order-head-detail .order-number {
   font-weight: 700;
 }
+.order-head-detail .order-date {
+  font-size: 11px;
+  color: #9fa19a;
+  font-weight: 400;
+}
