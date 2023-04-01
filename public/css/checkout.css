@@ -257,7 +257,7 @@ p {
   box-sizing: border-box !important;
 }
 .progress-bar {
-  margin: 3em 0 !important;
+  margin: 20px 0 40px 0 !important;
 }
 
 a:hover {
