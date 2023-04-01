@@ -61,6 +61,14 @@
   padding: 0 50px;
   font-size: 12px;
 }
+
+#order-status .customer-info p {
+  margin: 0 !important;
+}
+
+#order-status .status {
+  margin: 4% 0;
+}
 /* more */
 
 #more {
