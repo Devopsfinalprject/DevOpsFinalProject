@@ -153,3 +153,6 @@ p {
 .detail .order-detail-container .item .cols .price {
   font-weight: 500;
 }
+.detail .order-detail-container .item .cols b {
+  font-weight: 500;
+}
