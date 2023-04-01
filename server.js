@@ -473,6 +473,15 @@ app.get("/buy-this-now/:id", async function (req, res) {
     res.redirect("/checkout");
   }
 });
+// decrease qty of item when click 'minus' button in shopping-cart
+app.get("/reduce/:reItem", function (req, res) {
+  let productId = req.params.reItem;
+  let cart = new Cart(req.session.cart ? req.session.cart : {});
+
+  cart.reduceByOne(productId);
+  req.session.cart = cart;
+  res.redirect("/shopping-cart");
+});
 
 // retaurant side
 
