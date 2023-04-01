@@ -146,14 +146,15 @@ include('./templates/top-path') %>
 
       <div class="col">
         <b>Subtotal</b>
-        <p>65.00</p>
+        <p>£<%= totalPrice.toFixed(2) %></p>
       </div>
       <div class="col">
         <b>Total</b>
-        <h3>67.99</h3>
+        <h3>£<%= totalPrice.toFixed(2) %></h3>
       </div>
     </div>
   </div>
+</main>
 
   <section id="cart-empty">
     <div class="noti">
@@ -165,6 +166,6 @@ include('./templates/top-path') %>
       <a href="/"><button class="btn btn-danger">Return to shop</button></a>
     </div>
   </section>
-</main>
+
 
 <%- include('footer') %>
