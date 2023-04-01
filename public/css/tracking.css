@@ -90,6 +90,11 @@
   bottom: 34px;
   left: 0px;
 }
+
+#order-status .progress-bar p {
+  font-weight: 600;
+  font-size: 15px;
+}
 /* more */
 
 #more {
