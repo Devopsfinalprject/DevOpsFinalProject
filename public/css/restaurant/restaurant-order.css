@@ -50,3 +50,8 @@ p {
   margin-top: 15px;
   border-radius: 6px;
 }
+
+.question .show-detail i {
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
