@@ -525,3 +525,6 @@ a .bottom-nav-list {
   border-left: 1px solid #7dbc9f;
   padding-left: 14px;
 }
+.leaflet-control-container .leaflet-routing-container-hide {
+  display: none;
+}
