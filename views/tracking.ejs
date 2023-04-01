@@ -1,6 +1,7 @@
 <%- include('./templates/head') %> <%- include('./templates/header') %> <%-
 include('./templates/top-path') %>
-<form action="" method="post">
+
+<form action="/orders" method="post">
   <main id="tracking">
     <h1>Track Order</h1>
     <p>
@@ -11,12 +12,15 @@ include('./templates/top-path') %>
 
     <!-- create tracking search bar -->
     <div class="tracking-input">
-      <label for="">Order ID</label>
-      <input
-        type="text"
-        name="order-id"
-        placeholder="Found in your order confirmation email."
-      />
+      <div class="d-flex flex-lg-column flex-sm-row flex-lg-row">
+        <label for="">Order ID</label>
+        <input
+          type="text"
+          name="order-id"
+          placeholder="Found in your order confirmation email."
+          required
+        />
+      </div>
       <div>
         <button class="btn btn-success" type="submit">Track</button>
       </div>
