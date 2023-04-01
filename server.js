@@ -71,6 +71,16 @@ app.post("/user/signup", async function (req, res) {
     lat: lat,
     lon: lon,
   });
+  // new user --> add new user to database
+  const newUser = new User({
+    username: username,
+    email: email,
+    password: password,
+    addresses: newAddress,
+  });
+
+  newUser.save();
+  res.redirect("/user/signin");
 });
 
 app.post("/user/signin", async function (req, res) {
