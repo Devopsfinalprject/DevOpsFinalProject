@@ -310,4 +310,7 @@ p {
   #more .col {
     width: 100%;
   }
+  #more {
+    margin-top: 100px !important;
+  }
 }
