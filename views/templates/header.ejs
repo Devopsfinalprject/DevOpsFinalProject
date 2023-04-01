@@ -27,10 +27,14 @@
       </form>
 
       <div class="right-nav col-lg-4 d-flex align-items-center px-5">
+        <a href="/shopping-cart" id="cart"></a>
         <div class="cart-button mx-4">
           <i class="fa-solid fa-xs fa-cart-shopping"></i>
           <div class="cart-num">
-            <span id="cart-num">0</span>
+            <span id="cart-num">
+              <% if(!session.cart) { %> <%= 0 %> <% } else { %> <%=
+              session.cart.totalQty %> <% } %>
+            </span>
           </div>
         </div>
 
