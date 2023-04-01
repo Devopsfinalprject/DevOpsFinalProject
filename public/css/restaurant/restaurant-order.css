@@ -220,3 +220,8 @@ p {
 .detail .status-btn {
   justify-content: right;
 }
+.detail .status-btn .btn {
+  font-size: 12px;
+  padding: 7px 24px;
+  border-radius: 8px;
+}
