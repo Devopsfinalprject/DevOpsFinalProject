@@ -27,6 +27,19 @@ ul .nav-link {
   font-size: 14px;
 }
 
+.right-nav .shopping-cart {
+  position: absolute;
+  width: 258px;
+  left: 1013px;
+  top: 78px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 10px 20px;
+  opacity: 0;
+  z-index: 5000;
+  transform: scale(0);
+}
 .bottom-nav {
   display: none;
 }
