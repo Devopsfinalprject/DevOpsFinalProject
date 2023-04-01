@@ -70,6 +70,13 @@ app.post("/checkout", Authen.authentication, async function (req, res) {
 
   // find order status
   const findStatus = await Status.find({ name: "Queue" }, { _id: 0 });
+  // find user's selected address
+  const findAddress = await User.find(
+    { _id: user, "addresses._id": address },
+    { addresses: 1, _id: 0 }
+  );
+  const insertAddress = findAddress[0].addresses[0];
+  console.log(insertAddress);
 });
 
 // add sign up info to database
