@@ -420,6 +420,12 @@ if (typeof window !== "undefined") {
     }
   });
 }
+app.get("/reduce-this-qty/:id", (req, res) => {
+  if (req.session.currentQty > 1) {
+    req.session.currentQty -= 1;
+  }
+  res.redirect("/detail/" + req.params.id);
+});
 
 // retaurant side
 
