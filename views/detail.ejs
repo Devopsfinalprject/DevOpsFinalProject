@@ -72,17 +72,25 @@ include('category-bar') %>
   </div>
   <!-- -->
   <div class="row">
-    <% pizzas.forEach( pizza => { %> <% let cateName = pizza.category[0].name %>
-    <div
-      class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center pizza mt-5"
-    >
+    <% let i = 0; %> <% pizzas.forEach( (pizza) => { %> <% if
+    (pizza.category[0].name == category) { %> <% if(i < 3) { %>
+    <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center pizza mt-5">
       <a href="/detail/<%= pizza._id %>"></a>
       <img
         class="pizza-img"
-        src="img/<%= cateName %>/<%= pizza.name %>.png"
-        alt="pizza-img"
-      />
+        src="../img/<%=pizza.category[0].name%>/<%= pizza.name %>.png"
+        alt="pizza-img"/>
+        <h4><%= pizza.name %></h4>
+        <p class="price">£<%= pizza.price %></p>
+        <span style="display: none;"><%= pizza.category %></span>
+        <div>
+            <a href="/add-to-cart/<%= pizza._id %>"><button class="btn btn-outline-secondary">Add to cart</button></a>
+        </div>
+      </a>
     </div>
+    <% i++ %>
+    <% } %>
+<% } %>
     <% }) %>
   </div>
 </main>
