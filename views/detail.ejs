@@ -2,51 +2,6 @@
 include('category-bar') %>
 <main class="detail">
   <!-- add more detail of particualr menu such as size, price, quantity and recommandation menu -->
-  <div class="pizza-con-main d-flex flex-row align-items-center">
-    <img src="../img/<%=category%>/<%= name %>.png" alt="Chicken Trio" />
-    <div class="pizza-detail d-flex flex-column justify-content-between">
-      <h1><%= name %></h1>
-      <p>
-        Quisque pretium turpis non tempus cursus. Nulla consequat, mi nec
-        pellentesque imperdiet, mi quam congue magna, tristique commodo.
-      </p>
-      <div class="product-size">
-        <b>Pick size</b>
-        <div class="main-size">
-          <div class="size">
-            <div class="circle-option"><span>22</span> cm</div>
-            <p>25.60</p>
-          </div>
-
-          <div class="size">
-            <div class="circle-option"><span>29</span> cm</div>
-            <p>39.80</p>
-          </div>
-        </div>
-      </div>
-
-      <h3 id="detail-price">£25.90</h3>
-
-      <div class="product-quantity">
-        <p>Quantity</p>
-        <div class="d-flex flex-row select-quantity-btn">
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
-        </div>
-      </div>
-      <div class="">
-        <div class="d-flex flex-row">
-          <button class="btn btn-outline-secondary">Add to cart</button>
-          <button class="btn btn-success mx-2">Buy now</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div>
-    <h5 class="text-center">You may also like</h5>
-    <div class="border-top"></div>
-
     <a href="/detail">
       <div class="row">
         <% let i = 0;%> <% pizzas.forEach( (pizza, i) => { %> <% if(i < 3) { %>
