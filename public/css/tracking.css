@@ -69,6 +69,19 @@
 #order-status .status {
   margin: 4% 0;
 }
+
+#order-status .clock-icon {
+  bottom: 35px;
+  left: 0px;
+}
+
+#order-status .clock-icon,
+#order-status .pot-icon,
+#order-status .drive-icon {
+  position: relative;
+  z-index: 1000;
+}
+
 /* more */
 
 #more {
