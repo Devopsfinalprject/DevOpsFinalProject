@@ -340,30 +340,23 @@ app.get("/more", Authen.authentication, function (req, res) {
   res.render("more", { pageName: "Account" });
 });
 
-// add quantity filter
-if (typeof window !== "undefined") {
-  const minusBtn = document.querySelector(
-    ".select-quantity-btn button:first-child"
-  );
-  const plusBtn = document.querySelector(
-    ".select-quantity-btn button:last-child"
-  );
-  const quantityDisplay = document.querySelector(".select-quantity-btn span");
+app.get("/detail/:food", async (req, res) => {
+  let food = req.params.food;
 
-  let quantity = 1;
+  const pizzas = await Food.find({});
+  const pizza = await Food.findOne({ _id: food });
 
-  minusBtn.addEventListener("click", () => {
-    if (quantity > 1) {
-      quantity--;
-      quantityDisplay.textContent = quantity;
-    }
+  res.render("detail", {
+    id: pizza._id,
+    name: pizza.name,
+    price: pizza.price,
+    category: pizza.category[0].name,
+    categoryId: pizza.category[0]._id,
+    pizzas: pizzas,
+    description: pizza.description,
+    qty: req.session.currentQty,
   });
-
-  plusBtn.addEventListener("click", () => {
-    quantity++;
-    quantityDisplay.textContent = quantity;
-  });
-}
+});
 
 // add categories details
 if (typeof window !== "undefined") {
