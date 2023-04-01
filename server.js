@@ -500,6 +500,12 @@ app.get("/remove/:reItem", function (req, res) {
   req.session.cart = cart;
   res.redirect("/shopping-cart");
 });
+// user logout
+app.get("/logout", (req, res) => {
+  req.session.destroy(function (err) {
+    res.redirect("/");
+  });
+});
 
 // retaurant side
 
