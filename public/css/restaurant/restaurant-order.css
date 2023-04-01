@@ -84,3 +84,6 @@ p {
   justify-content: space-between;
   height: 53px;
 }
+.order-head-detail .order-number {
+  font-weight: 700;
+}
