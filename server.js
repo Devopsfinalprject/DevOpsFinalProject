@@ -320,6 +320,20 @@ app.get("/detail/:food", async (req, res) => {
     qty: req.session.currentQty,
   });
 });
+app.get("/shopping-cart", function (req, res, next) {
+  if (!req.session.cart) {
+    return res.render("shoppingcart", {
+      products: null,
+      pageName: "Shopping Cart",
+    });
+  }
+  let cart = new Cart(req.session.cart);
+  res.render("shoppingcart", {
+    products: cart.generateArray(),
+    totalPrice: cart.totalPrice,
+    pageName: "Shopping Cart",
+  });
+});
 
 // user account
 app.get("/more", Authen.authentication, function (req, res) {
