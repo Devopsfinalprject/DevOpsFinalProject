@@ -196,3 +196,7 @@ p {
   object-fit: cover;
   margin-right: 15px;
 }
+.detail .border-left {
+  border-left: 1px solid #d9d9d9;
+  margin: 0 40px;
+}
