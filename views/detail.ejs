@@ -11,6 +11,21 @@ include('category-bar') %>
   <i class="fa-solid fa-xs fa-angle-right"></i>
   <p><%= name %></p>
 </div>
+
+<div class="border-top"></div>
+  <!-- display message after add to cart -->
+  <% if(session.addedMsg) { %>
+    <div class="display-error-container added">
+      <div class="left"></div>
+      <p><%= session.addedMsg %></p>
+      <div class="right">
+        <a href="/shopping-cart">View cart</a>
+      </div>
+    </div>
+    <!-- delete show error message after display -->
+    <% delete session.addedMsg %>
+  <% } %>
+
   <!-- add more detail of particualr menu such as size, price, quantity and recommandation menu -->
       <div class="row">
         <% pizzas.forEach( pizza => { %> <% let cateName =
