@@ -1,3 +1,36 @@
 .logout {
   display: inline-flex !important;
 }
+#rest-left-nav {
+  position: fixed;
+  left: 0;
+  top: 49px;
+  border-right: 1px solid #d9d9d9;
+  height: 100%;
+  background-color: #fff;
+  padding: 25px 15px;
+}
+
+#rest-left-nav .container {
+  height: 94%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#rest-left-nav .fa-solid {
+  color: #9fa19a;
+}
+
+#rest-left-nav .top {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#rest-left-nav .fa-right-from-bracket,
+#more .fa-arrow-right-from-bracket {
+  rotate: 180deg;
+}
