@@ -119,6 +119,12 @@ app.get("/add-to-cart/:id", async function (req, res) {
   }
 });
 
+app.get("/add-this-qty/:id", (req, res) => {
+  req.session.currentQty += 1;
+  // console.log(req.session.currentQty)
+  res.redirect("/detail/" + req.params.id);
+});
+
 app.get("/order-complete", function (req, res) {
   res.render("order-complete");
 });
