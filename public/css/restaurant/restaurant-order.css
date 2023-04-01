@@ -186,3 +186,7 @@ p {
 .detail .cust-detail-container .each-status {
   width: 50%;
 }
+.detail .cust-detail-container .cust-name,
+.detail .cust-detail-container .each-status {
+  width: 50%;
+}
