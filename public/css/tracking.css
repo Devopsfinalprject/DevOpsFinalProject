@@ -112,6 +112,11 @@
   color: #6e6d6d;
 }
 
+#order-status iframe {
+  width: 700px !important;
+  height: 100%;
+}
+
 #more {
   margin: 3%;
   display: flex;
