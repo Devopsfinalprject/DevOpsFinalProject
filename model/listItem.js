@@ -21,3 +21,9 @@ const foodSchema = new mongoose.Schema({
   price: Number,
   category: [categorySchema],
 });
+
+const statusSchema = new mongoose.Schema({
+  name: String,
+  status: String,
+  description: String,
+});
