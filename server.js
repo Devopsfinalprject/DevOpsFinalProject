@@ -104,13 +104,15 @@ app.get("/menu/:category", async (req, res) => {
 });
 
 app.get("/orders", function (req, res) {
-  // res.sendFile(__dirname + "/index.html");
-  res.render("tracking");
+  res.render("tracking", { pageName: "Order" });
 });
 
-app.post("/orders", function (req, res) {
-  // res.sendFile(__dirname + "/index.html");
-  res.render("order-status");
+app.post("/orders", async function (req, res) {
+  const orderId = req.body.orderId;
+  let foundedOrder = await Order.find({ _id: orderId }).catch(function (err) {
+    req.session.errorMsg = "Sorry, the order could not be found.";
+    res.redirect("/orders");
+  });
 });
 
 app.get("/checkout", Authen.authentication, async function (req, res) {
