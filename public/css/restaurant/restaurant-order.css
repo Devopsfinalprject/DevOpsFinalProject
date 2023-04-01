@@ -225,3 +225,6 @@ p {
   padding: 7px 24px;
   border-radius: 8px;
 }
+.detail .status-btn .btn-success {
+  margin-left: 10px;
+}
