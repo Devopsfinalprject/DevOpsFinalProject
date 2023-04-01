@@ -27,3 +27,7 @@ const statusSchema = new mongoose.Schema({
   status: String,
   description: String,
 });
+
+exports.Category = mongoose.model("category", categorySchema);
+exports.Food = mongoose.model("food", foodSchema);
+exports.Status = mongoose.model("status", statusSchema);
