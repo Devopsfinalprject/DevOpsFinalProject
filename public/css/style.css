@@ -120,6 +120,11 @@ a .bottom-nav-list {
   background-color: #bf0b26;
   padding: 1% 0;
 }
+.pizza-img {
+  width: 350px !important;
+  height: 250px;
+  object-fit: cover;
+}
 
 .row img {
   width: 100% !important;
