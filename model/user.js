@@ -1,3 +1,20 @@
+const mongoose = require("mongoose");
+
+// admin schema
+const adminSchema = new mongoose.Schema({
+  username: {
+    type: String,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+});
+
 const addressSchema = new mongoose.Schema({
   firstname: String,
   lastname: String,
@@ -25,5 +42,6 @@ const userSchema = new mongoose.Schema({
   addresses: [addressSchema],
 });
 
+exports.Admin = mongoose.model("admin", adminSchema);
 exports.User = mongoose.model("user", userSchema);
 exports.Address = mongoose.model("address", addressSchema);
