@@ -24,8 +24,8 @@
     <img src="img/ICON/Group.svg" alt="Group" />
     <p>
       Thank you for ordering in our restaurant. Your order number is
-      <b>#<span>2097</span></b> Now check a Pizza Tracker progress with your
-      order.
+      <b>#<span><%= session.orderID %></span></b> Now check a Pizza Tracker
+      progress with your order.
     </p>
     <!-- CTA button -->
     <a href="/orders"
@@ -33,4 +33,9 @@
     >
   </div>
 </main>
+
 <%- include('./templates/footer') %>
+<script>
+  document.getElementById("moto-icon-hide").style.display = "none";
+  document.querySelectorAll(".bottom-nav li")[3].style.color = "white";
+</script>
