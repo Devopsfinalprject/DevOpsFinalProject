@@ -282,21 +282,19 @@ app.get("/account", function (req, res) {
   res.render("account");
 });
 
-app.get("/detail/:food", function (req, res) {
-  let food = _.lowerCase(req.params.food);
-
-  pizzas.forEach(function (pizza) {
-    let checkFoodTitle = _.lowerCase(pizza.name);
-
-    if (food == checkFoodTitle) {
-      res.render("detail", {
-        name: pizza.name,
-        price: pizza.price,
-        category: pizza.category,
-        pizzas: pizzas,
-        categories: categories,
-      });
-    }
+app.get("/detail/:food", async (req, res) => {
+  let food = req.params.food;
+  const pizzas = await Food.find({});
+  const pizza = await Food.findOne({ _id: food });
+  res.render("detail", {
+    id: pizza._id,
+    name: pizza.name,
+    price: pizza.price,
+    category: pizza.category[0].name,
+    categoryId: pizza.category[0]._id,
+    pizzas: pizzas,
+    description: pizza.description,
+    qty: req.session.currentQty,
   });
 });
 
