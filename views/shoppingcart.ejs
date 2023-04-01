@@ -49,6 +49,27 @@ include('./templates/top-path') %>
           <p>Size: 29 cm</p>
         </div>
       </div>
+      <% products.forEach((product) => { %>
+
+      <div class="product-detail">
+        <a href="/remove/<%= product.item._id %>"
+          ><div><i class="fa-solid fa-xmark"></i></div
+        ></a>
+
+        <div class="product-img">
+          <img
+            src="../img/<%= product.item.category[0].name %>/<%= product.item.name %>.png"
+            alt=""
+          />
+        </div>
+
+        <div class="product-name">
+          <h3><%= product.item.name %></h3>
+          <p>Size: 29 cm</p>
+        </div>
+      </div>
+
+      <% }) %>
     </div>
 
     <!-- item mobile -->
