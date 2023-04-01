@@ -88,11 +88,12 @@
        <% } %>
         
     </div>
-
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <a href="/signin" class="link-light px-4">Login / Register</a>
-      </div>
+<!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+<% if(!session.userName) { %>
+  <a href="/user/signin" class="link-light px-4">Login / Register</a>
+<% } else { %>
+  <a href="/more" class="link-light px-4">Hello, <b><%= session.userName %></b></a>
+<% } %>
     </div>
   </div>
 </header>
