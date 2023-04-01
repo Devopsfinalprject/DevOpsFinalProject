@@ -64,6 +64,10 @@
   justify-content: left !important;
   min-height: 0 !important;
 }
+.admin-register .btn-success {
+  background-color: #bf0b26;
+  border: none;
+}
 
 /* screen size */
 
