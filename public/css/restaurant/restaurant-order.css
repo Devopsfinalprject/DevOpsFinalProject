@@ -236,3 +236,7 @@ p {
   font-size: 18px;
   margin: 0;
 }
+.detail .cust-info {
+  display: flex;
+  flex-direction: row;
+}
