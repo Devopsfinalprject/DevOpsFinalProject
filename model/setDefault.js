@@ -1,4 +1,5 @@
 const listItem = require("./listItem");
+const Category = listItem.Category;
 const Food = listItem.Food;
 
 // All default categories
