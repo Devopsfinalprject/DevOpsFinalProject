@@ -460,3 +460,6 @@ a .bottom-nav-list {
 .hide {
   display: none !important;
 }
+.row {
+  --bs-gutter-x: 0rem;
+}
