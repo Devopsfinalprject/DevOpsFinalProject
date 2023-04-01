@@ -5,6 +5,16 @@ include('./templates/top-path') %>
   <main id="tracking">
     <h1>Track Order</h1>
 
+    <!-- // after database -->
+    <!-- display error message -->
+    <% if(session.errorMsg) { %>
+    <div class="display-error-container error">
+      <div class="left"></div>
+      <p><%= session.errorMsg %></p>
+    </div>
+    <!-- delete show error message after display -->
+    <% delete session.errorMsg %> <% } %>
+
     <p class="my-4">
       To track your order please enter your Order ID in the box below and press
       the "Track" button. This was given to you on your receipt and in the
