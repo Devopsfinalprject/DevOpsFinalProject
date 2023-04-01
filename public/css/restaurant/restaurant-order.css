@@ -176,3 +176,6 @@ p {
 .detail .order-detail-container .cols b {
   font-weight: 500;
 }
+.detail .order-detail-container .total-price {
+  align-items: end;
+}
