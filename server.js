@@ -577,6 +577,19 @@ app.get(
     const foundStatus = await Status.find({});
     const foundOrder = await Order.find({});
     const thisStatus = await Status.findOne({ _id: statusId });
+    // find number of order in each status
+    const numofQueue = await Order.find({ "status.name": "Queue" });
+    const numofCook = await Order.find({ "status.name": "Cook" });
+    const numofDelivery = await Order.find({ "status.name": "Delivery" });
+
+    res.render("restaurant/restaurant-order", {
+      allStatus: foundStatus,
+      orders: foundOrder,
+      statusName: thisStatus.name,
+      numofQueue: numofQueue,
+      numofCook: numofCook,
+      numofDelivery: numofDelivery,
+    });
   }
 );
 
