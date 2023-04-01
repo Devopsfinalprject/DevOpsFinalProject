@@ -143,3 +143,7 @@ p {
 .detail .order-detail-container {
   width: 50%;
 }
+.detail .order-detail-container .item {
+  margin: 20px 0;
+  font-size: 12px;
+}
