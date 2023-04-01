@@ -63,6 +63,15 @@ app.get("/checkout", Authen.authentication, async function (req, res) {
   });
 });
 
+app.post("/checkout", Authen.authentication, async function (req, res) {
+  let cart = new Cart(req.session.cart);
+  let address = req.body.address;
+  let user = req.session.userId;
+
+  // find order status
+  const findStatus = await Status.find({ name: "Queue" }, { _id: 0 });
+});
+
 // add sign up info to database
 app.post("/user/signup", async function (req, res) {
   // Get user input using bodyParser
