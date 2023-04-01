@@ -58,6 +58,12 @@
 #register textarea {
   border: 0.5px solid #9da3a7;
 }
+.admin-register {
+  margin-left: 40px !important;
+  display: flex;
+  justify-content: left !important;
+  min-height: 0 !important;
+}
 
 /* screen size */
 
