@@ -160,3 +160,6 @@ p {
   color: #9da3a7;
   font-size: 10px;
 }
+.detail .order-detail-container .head {
+  height: 90%;
+}
