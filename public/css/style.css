@@ -470,3 +470,28 @@ a .bottom-nav-list {
   flex-direction: row;
   width: 500px;
 }
+/* error show */
+.display-error-container {
+  background-color: #3d9cd2;
+  color: #fff;
+  padding: 0px 25px;
+  font-size: 30px;
+  margin: 20px 0;
+  position: relative;
+  width: 60%;
+  font-size: 15px;
+  text-align: left !important;
+}
+
+.display-error-container p {
+  text-align: left !important;
+  margin: 12px 0 !important;
+}
+
+.display-error-container .left {
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
