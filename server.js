@@ -131,6 +131,16 @@ app.post("/orders", async function (req, res) {
         day: "numeric",
       };
       let date = foundedOrder.date.toLocaleString("en-US", options);
+      // send data to page
+      res.render("order-status", {
+        pageName: "Order",
+        order: foundedOrder,
+        carts: foundedOrder.cart,
+        date: date,
+        status: foundedOrder.status,
+        id: orderId,
+        address: foundedOrder.address,
+      });
     }
   }
 });
