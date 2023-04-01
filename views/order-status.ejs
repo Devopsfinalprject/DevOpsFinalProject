@@ -61,4 +61,13 @@ include('./templates/top-path') %>
   </div>
   <% } %>
 </main>
-<%- include('footer') %>
+
+<script>
+  // change page icon's color
+  document.getElementById("moto-icon-show").style.display = "none";
+  document.querySelectorAll(".bottom-nav li")[2].style.color = "white";
+
+  // target the progress bar
+  const progressBar = document.querySelector(".progress-bar");
+</script>
+<%- include('./templates/footer') %>
