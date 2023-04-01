@@ -92,8 +92,7 @@ include('./templates/top-path') %>
       <% products.forEach((product) => { %>
         <div>
           <a href="/remove/<%= product.item._id %>"
-            ><div class="close"><i class="fa-solid fa-xmark"></i></div
-          ></a>
+            ><div class="close"><i class="fa-solid fa-xmark"></i></div></a>
           <div class="col">
             <h5>Product:</h5>
             <div>
@@ -101,6 +100,12 @@ include('./templates/top-path') %>
               <p>Size: 29 cm</p>
             </div>
           </div>
+          <div class="col">
+            <h5>Price:</h5>
+            <p>£<%= (product.item.price).toFixed(2) %></p>
+          </div>
+
+        </div>
           <% }) %>
     </section>
 
