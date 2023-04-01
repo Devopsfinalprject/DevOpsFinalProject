@@ -4,10 +4,8 @@ include('category-bar') %>
 
 <!-- add list of items for each menu -->
 <div class="row">
-  <% pizzas.forEach( pizza => { %> <% let cateName =
-  pizza.category.toUpperCase() %>
+  <% pizzas.forEach( pizza => { %> <% let cateName = pizza.category[0].name %>
   <div
-    data-category="<%= pizza.category %>"
     class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center pizza mt-5"
   >
     <a href="/detail/<%= pizza.name %>">
@@ -16,27 +14,25 @@ include('category-bar') %>
         src="img/<%= cateName %>/<%= pizza.name %>.png"
         alt="pizza-img"
       />
-      <h4><%= pizza.name %></h4>
-      <p class="price">£<%= pizza.price %></p>
 
-      <div>
-        <a href="/add-to-cart/<%= pizza._id %>"
-          ><button class="btn btn-outline-secondary addToCart">
-            <img
-              src="img/icon/shopping-bag.svg"
-              alt="shopping-bag"
-              width="10px"
-            />
-            Add to cart
-            <a href="/buy-now/<%= pizza._id %>"
-              ><button class="btn btn-success">Buy now</button></a
-            >
-          </button></a
-        >
-
-        <button class="btn btn-success">Buy now</button>
-      </div>
+      <h4 class="item-name"><%= pizza.name %></h4>
+      <p class="price">
+        £<span class="item-price"><%= pizza.price.toFixed(2) %></span>
+      </p>
     </a>
+
+    <div>
+      <a href="/add-to-cart/<%= pizza._id %>"><button class="btn btn-outline-secondary addToCart">
+          <img
+            src="img/icon/shopping-bag.svg"
+            alt="shopping-bag"
+            width="10px"
+          />
+          Add to cart 
+        </a>
+          <a href="/buy-now/<%= pizza._id %>"
+            ><button class="btn btn-success">Buy now</button></a>
+    </div>
   </div>
   <% }) %>
 </div>
