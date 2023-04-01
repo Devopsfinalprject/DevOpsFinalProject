@@ -4,27 +4,27 @@ include('./templates/top-path') %>
   <div class="customer-info">
     <div>
       <b>ORDER PLACED</b>
-      <p>May 21, 2022</p>
+      <p><%= date %></p>
     </div>
 
     <div>
       <b>TOTAL</b>
-      <p>£51.80</p>
+      <p>£<%= carts.totalPrice.toFixed(2) %></p>
     </div>
 
     <div>
       <b>SHIP TO</b>
-      <p>Michael Kowalsky</p>
+      <p><%= address.firstname %> <%= address.lastname %></p>
     </div>
 
     <div>
       <b>ORDER</b>
-      <p>00000000296</p>
+      <p><%= id %></p>
     </div>
   </div>
 
   <div class="status">
-    <p>Order Status: <b>We are now preparing your Pizza</b></p>
+    <p>Order Status: <b><%= status.description %></b></p>
     <p>Estimated Delivery Time: 30 minutes</p>
   </div>
 
