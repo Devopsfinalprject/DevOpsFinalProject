@@ -111,3 +111,41 @@
     <input type="hidden" name="lon">
 </form>
 <%- include('../templates/footer') %>
+
+<script>
+ 
+  // get current location of user
+  const success = (position) => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      const apiKey = 'a5dba0b93fac444ba8ab3513538b8565';
+
+      fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lon)}&apiKey=${encodeURIComponent(apiKey)}`)
+      .then(resp => resp.json())
+      .then((response) => {
+        const path = response;
+        const showAdress = path.features[0].properties.formatted;
+        const name = path.features[0].properties.name
+        const street = path.features[0].properties.street;
+        const city = path.features[0].properties.city;
+        const address = name + ', '+ street + ', ' + city;
+        const postCode = path.features[0].properties.postcode;
+        console.log(address)
+
+        document.querySelector("input[name='address']").value = address;
+        document.querySelector("input[name='city']").value = city;
+        document.querySelector("input[name='postcode']").value = postCode;
+        document.querySelector("input[name='lat']").value = lat;
+        document.querySelector("input[name='lon']").value = lon;
+        
+      });
+  }
+
+  const error = (err) => {
+      console.log(err)
+  }
+
+  navigator.geolocation.getCurrentPosition(success, error)
+
+
+</script>
