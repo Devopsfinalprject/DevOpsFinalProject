@@ -482,6 +482,15 @@ app.get("/reduce/:reItem", function (req, res) {
   req.session.cart = cart;
   res.redirect("/shopping-cart");
 });
+// increase qty of item when click 'plus' button in shopping-cart
+app.get("/add/:reItem", function (req, res) {
+  let productId = req.params.reItem;
+  let cart = new Cart(req.session.cart ? req.session.cart : {});
+
+  cart.increaseByOne(productId);
+  req.session.cart = cart;
+  res.redirect("/shopping-cart");
+});
 
 // retaurant side
 
