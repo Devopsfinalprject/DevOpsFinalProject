@@ -301,4 +301,10 @@ p {
     margin: 0;
     padding: 0;
   }
+  body {
+    margin-bottom: 60px !important;
+  }
+  .bottom-nav a {
+    color: #e0929d;
+  }
 }
