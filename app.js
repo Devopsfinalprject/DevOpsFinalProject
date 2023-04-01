@@ -145,6 +145,16 @@ if (typeof window !== "undefined") {
   });
 }
 
+//Schema models
+const listItem = require("./model/listItem");
+const Category = listItem.Category;
+const Food = listItem.Food;
+const Status = listItem.Status;
+const setDefault = require("./model/setDefault");
+const User = require("./model/user").User;
+const Address = require("./model/user").Address;
+const Order = require("./model/order");
+
 // add categories details
 if (typeof window !== "undefined") {
   document
