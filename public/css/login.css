@@ -92,13 +92,17 @@
 }
 
 #login {
-  width: 39%;
+  width: 25%;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   color: #666;
+}
+.admin-login {
+  width: 100% !important;
+  justify-content: center;
 }
 
 #login div {
