@@ -76,8 +76,21 @@ ul .nav-link {
 #show-shopping-cart .net-price {
   text-align: center;
 }
+
 .bottom-nav {
   display: none;
+}
+#show-shopping-cart .btn-light {
+  background-color: #cfcece;
+}
+
+#show-shopping-cart .btn-danger {
+  background-color: #bf0b26;
+}
+
+.right-nav .shopping-cart p {
+  color: #5f5f5f;
+  font-size: 12px;
 }
 
 .bottom-nav ul {
