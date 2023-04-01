@@ -232,3 +232,7 @@ p {
 .order-date.show {
   color: #fff;
 }
+.detail h5 {
+  font-size: 18px;
+  margin: 0;
+}
