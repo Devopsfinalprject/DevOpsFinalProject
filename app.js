@@ -21,11 +21,18 @@ app.get("/detail", function (req, res) {
   });
 });
 
-//not yet
-app.get("/Menu", function (req, res) {
-  // res.sendFile(__dirname + "/index.html");
-  // res.render('index');
-  res.send("Menu");
+app.get("/menu/:category", async (req, res) => {
+  let category = req.params.category;
+
+  const foundCategory = await Category.findOne({ _id: category });
+  const pizzas = await Food.find({});
+  const categories = await Category.find({});
+
+  res.render("menu", {
+    categories: categories,
+    pizzas: pizzas,
+    currentCategory: foundCategory,
+  });
 });
 
 app.get("/orders", function (req, res) {
