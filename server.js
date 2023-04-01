@@ -491,6 +491,15 @@ app.get("/add/:reItem", function (req, res) {
   req.session.cart = cart;
   res.redirect("/shopping-cart");
 });
+// remove all items when click 'x' button in shopping-cart
+app.get("/remove/:reItem", function (req, res) {
+  let productId = req.params.reItem;
+  let cart = new Cart(req.session.cart ? req.session.cart : {});
+
+  cart.removeItem(productId);
+  req.session.cart = cart;
+  res.redirect("/shopping-cart");
+});
 
 // retaurant side
 
