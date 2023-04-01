@@ -1,3 +1,7 @@
+<!-- add include -->
+<%- include('./templates/head') %> <%- include('./templates/header') %> <%-
+include('category-bar') %>
+
 <!-- add list of items for each menu -->
 <div class="row">
   <% pizzas.forEach( pizza => { %> <% let cateName = pizza.category[0].name %>
@@ -35,3 +39,6 @@
   </div>
   <% }%> <% }) %>
 </div>
+
+<!-- footer -->
+<%- include('./templates/footer') %>
