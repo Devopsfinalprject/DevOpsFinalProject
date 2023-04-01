@@ -40,6 +40,42 @@ ul .nav-link {
   z-index: 5000;
   transform: scale(0);
 }
+.cart-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+#show-shopping-cart img {
+  width: 100px;
+}
+
+#show-shopping-cart .item,
+#show-shopping-cart .col {
+  display: flex;
+  flex-direction: row;
+}
+
+#show-shopping-cart .item {
+  margin: 10px 0 25px 0;
+}
+
+#show-shopping-cart .col {
+  justify-content: left;
+}
+
+#show-shopping-cart .item .fa-xmark {
+  color: #9fa19a;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#show-shopping-cart .border-bottom {
+  margin: 10px 0;
+}
+
+#show-shopping-cart .net-price {
+  text-align: center;
+}
 .bottom-nav {
   display: none;
 }
