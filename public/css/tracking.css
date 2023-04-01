@@ -105,6 +105,12 @@
   flex-direction: row;
   margin-top: 20px;
 }
+#order-status .shipped h5 {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  color: #6e6d6d;
+}
 
 #more {
   margin: 3%;
