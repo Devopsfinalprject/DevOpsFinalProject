@@ -250,3 +250,14 @@ p {
 .bottom-nav {
   display: none;
 }
+
+/* tablet */
+@media (max-width: 992px) {
+  body {
+    margin-left: 60px !important;
+  }
+  #more .col {
+    margin: 50px 0 20px 0px;
+    width: 100%;
+  }
+}
