@@ -199,6 +199,17 @@ if (typeof window !== "undefined") {
   });
 }
 
+// restaurant side
+// retaurant side
+
+app.get("/admin/signup", function (req, res) {
+  res.render("admin/signup");
+});
+
+app.get("/admin/signin", function (req, res) {
+  res.render("admin/signin");
+});
+
 app.listen(9000, function () {
   console.log("Server run on port 9000");
 });
