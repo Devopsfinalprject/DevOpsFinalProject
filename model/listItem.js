@@ -5,3 +5,12 @@ const categorySchema = new mongoose.Schema({
   icon: String,
 });
 exports.Category = mongoose.model("category", categorySchema);
+const addressSchema = new mongoose.Schema({
+  firstname: String,
+  lastname: String,
+  phone: String,
+  address: String,
+  city: String,
+  postcode: String,
+  orderNote: String,
+});
