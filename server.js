@@ -102,6 +102,9 @@ app.get("/menu/:category", async (req, res) => {
     currentCategory: foundCategory,
   });
 });
+app.get("/order-complete", function (req, res) {
+  res.render("order-complete");
+});
 
 app.get("/orders", function (req, res) {
   res.render("tracking", { pageName: "Order" });
