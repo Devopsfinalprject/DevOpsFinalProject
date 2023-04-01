@@ -204,3 +204,8 @@ p {
   font-size: 12px;
   font-weight: 500;
 }
+.cust-detail-container .cols .status,
+.cust-detail-container .cols .date {
+  color: #9da3a7;
+  margin-bottom: 5px;
+}
