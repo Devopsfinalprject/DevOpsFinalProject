@@ -130,3 +130,7 @@ p {
   border-radius: 6px;
   margin-left: 10px;
 }
+
+.show-detail .order-total {
+  color: #bf0b26;
+}
