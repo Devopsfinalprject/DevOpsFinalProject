@@ -558,6 +558,16 @@ app.get("/restaurant", restAuthen.authentication, async function (req, res) {
   const path = foundStatus[0]._id;
   res.redirect("/restaurant/" + path);
 });
+app.get(
+  "/restaurant/admin",
+  restAuthen.authentication,
+  async function (req, res) {
+    const foundStatus = await Status.find({});
+    res.render("restaurant/admin", {
+      allStatus: foundStatus,
+    });
+  }
+);
 
 app.listen(9000, function () {
   console.log("Server run on port 9000");
