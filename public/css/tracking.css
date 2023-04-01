@@ -43,6 +43,11 @@
   margin-left: 10px;
 }
 
+/* order status */
+#order-status .customer-info,
+#order-status .status {
+  text-align: center;
+}
 /* more */
 
 #more {
