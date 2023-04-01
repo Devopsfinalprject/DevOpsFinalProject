@@ -1,4 +1,5 @@
-<%- include('head') %> <%- include('header') %>
+<%- include('./templates/head') %> <%- include('./templates/header') %>
+<%- include('./templates/top-path') %>
 <main id="more">
   <h1>Account</h1>
 
@@ -16,10 +17,11 @@
     <i><i class="fa-solid fa-user fa-xl"></i></i>
     <p>Account details</p>
   </div>
+  <a href="/logout"><div class="col">
 
   <div class="col">
     <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i>
     <p>Logout</p>
   </div>
 </main>
-<%- include('footer') %>
+<%- include('./templates/footer') %>
