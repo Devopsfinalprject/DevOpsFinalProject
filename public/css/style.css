@@ -277,8 +277,21 @@ a .bottom-nav-list {
   background-color: #fff;
 }
 
+.pizza-img {
+  width: 350px !important;
+  height: 250px;
+  object-fit: cover;
+}
+.pizza-con-main .detail-pizza-img {
+  width: 100% !important;
+}
+
 .detail .product-quantity {
   display: flex;
+}
+.detail .pizza-con-main .detail-pizza-img {
+  width: 45%;
+  height: 100%;
 }
 
 .detail .product-quantity p {
