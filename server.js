@@ -23,6 +23,12 @@ const Admin = require("./model/user").Admin;
 const Address = require("./model/user").Address;
 const Order = require("./model/order");
 
+// authentication
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
+const Authen = require("./control/authen");
+const restAuthen = require("./control/restAuthen");
+
 app.get("/", function (req, res) {
   // res.sendFile(__dirname + "/index.html");
   res.render("index", {
