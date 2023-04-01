@@ -69,6 +69,17 @@ app.get("/", async (req, res) => {
   pizzaId.forEach((pizza) => {
     req.session.menuLink = pizza._id;
   });
+  if (pizzas.length === 0 && categories.length === 0 && status.length === 0) {
+    // add deafult item to db if no item in db
+    setDefault.setDefaultAll();
+
+    res.redirect("/");
+  } else {
+    res.render("index", {
+      categories: categories,
+      pizzas: pizzas,
+    });
+  }
 });
 
 app.get("/detail", function (req, res) {
