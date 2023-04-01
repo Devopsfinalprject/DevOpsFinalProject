@@ -23,4 +23,14 @@ include('../restaurant/partials/nav-bar') %>
     </div>
   </div>
 </main>
+<script>
+  const btmNav = document.querySelector(".bottom-nav");
+  const leftNav = document.getElementById("rest-left-nav");
+
+  // change color of bottom menu
+  btmNav.querySelectorAll("li")[1].style.color = "white";
+
+  // change color of left nav
+  leftNav.querySelectorAll("i")[1].style.color = "#000";
+</script>
 <%- include('../restaurant/partials/footer') %>
