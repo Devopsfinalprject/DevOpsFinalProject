@@ -173,3 +173,6 @@ p {
 .detail .cust-detail-container {
   justify-content: space-between;
 }
+.detail .order-detail-container .cols b {
+  font-weight: 500;
+}
