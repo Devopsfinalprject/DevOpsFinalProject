@@ -313,4 +313,7 @@ p {
   #more {
     margin-top: 100px !important;
   }
+  .logout {
+    display: inline-flex !important;
+  }
 }
