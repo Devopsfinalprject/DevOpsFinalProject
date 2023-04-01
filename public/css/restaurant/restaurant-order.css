@@ -77,3 +77,10 @@ p {
 .questions-container h4 {
   margin-bottom: 20px;
 }
+.order-head-detail {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+  height: 53px;
+}
