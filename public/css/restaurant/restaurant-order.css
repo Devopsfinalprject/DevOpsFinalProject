@@ -150,3 +150,6 @@ p {
 .detail .order-detail-container .item .cols {
   margin: 5px 0;
 }
+.detail .order-detail-container .item .cols .price {
+  font-weight: 500;
+}
