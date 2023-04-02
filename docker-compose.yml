@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   app:
-    container_name: finalProjectDev
+    container_name: DevOpsFinalProject
     restart: always
     image: gc6532115001/devopsproject:latest
     ports:
