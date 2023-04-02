@@ -284,11 +284,6 @@ app.post("/user/signin", async function (req, res) {
   }
 });
 
-app.get("/cart", function (req, res) {
-  // res.sendFile(__dirname + "/index.html");
-  res.render("shoppingcart");
-});
-
 app.post("/order-complete", function (req, res) {
   res.render("order-complete");
 });
