@@ -293,10 +293,6 @@ app.get("/cart", function (req, res) {
   res.render("shoppingcart");
 });
 
-app.post("/checkout", function (req, res) {
-  res.render("checkout");
-});
-
 app.post("/order-complete", function (req, res) {
   res.render("order-complete");
 });
