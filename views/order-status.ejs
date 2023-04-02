@@ -23,6 +23,7 @@ include('./templates/top-path') %>
     </div>
   </div>
 
+  <!-- display order status-->
   <div class="status">
     <p>Order Status: <b><%= status.description %></b></p>
     <p>Estimated Delivery Time: 30 minutes</p>
@@ -30,11 +31,11 @@ include('./templates/top-path') %>
 
   <!-- progress bar -->
   <ol class="progress-bar">
-    <li class="is-complete" data-step="">
+    <li data-step="">
       <img class="clock-icon" src="img/ICON/clock-icon.svg" alt="clock-icon" />
       <p>Queue</p>
     </li>
-    <li class="is-active" data-step="">
+    <li data-step="">
       <img class="pot-icon" src="img/ICON/CookingPot.svg" alt="CookingPot" />
       <p>Cook</p>
     </li>
