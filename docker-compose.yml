@@ -1,6 +1,8 @@
 version: '3.3'
 services:
-  frontend:
+  app:
+    container_name: finalProjectDev
+    restart: always
     image: gc6532115001/234-deploylab-frontend:latest
     ports:
       - "8086:8080"
