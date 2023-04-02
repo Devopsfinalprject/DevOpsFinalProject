@@ -50,7 +50,8 @@
           <p>Size: 29 cm</p>
         </div>
       </div>
-      <% products.forEach((product) => { %>
+      
+      <!-- <% products.forEach((product) => { %>
 
       <div class="product-detail">
         <a href="/remove/<%= product.item._id %>"
@@ -67,9 +68,8 @@
         <div class="product-name">
           <h3><%= product.item.name %></h3>
           <p>Size: 29 cm</p>
-        </div>
-      </div>
-      div class="col">£<%= (product.item.price).toFixed(2) %></div>
+        </div> -->
+      </div class="col">£<%= (product.item.price).toFixed(2) %></div>
 
       <div class="col">
         <div class="qty-btn">
@@ -83,7 +83,6 @@
         </div>
       </div>
       <div class="col subtotal">£<%= (product.price).toFixed(2) %></div>
-
       <% }) %>
     </div>
 
