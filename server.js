@@ -284,14 +284,6 @@ app.post("/user/signin", async function (req, res) {
   }
 });
 
-app.post("/order-complete", function (req, res) {
-  res.render("order-complete");
-});
-
-app.get("/account", function (req, res) {
-  res.render("account");
-});
-
 app.get("/detail/:food", async (req, res) => {
   let food = req.params.food;
   const pizzas = await Food.find({});
