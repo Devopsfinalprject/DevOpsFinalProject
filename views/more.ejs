@@ -1,5 +1,5 @@
-<%- include('./templates/head') %> <%- include('./templates/header') %>
-<%- include('./templates/top-path') %>
+<%- include('./templates/head') %> <%- include('./templates/header') %> <%-
+include('./templates/top-path') %>
 <main id="more">
   <h1>Account</h1>
 
@@ -18,17 +18,16 @@
     <p>Account details</p>
   </div>
 
-  <a href="/logout"><div class="col">
-
-  <div class="col">
-    <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i>
-    <p>Logout</p>
-  </div></a>
+  <a href="/logout">
+    <div class="col">
+      <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i>
+      <p>Logout</p>
+    </div></a
+  >
 </main>
 <%- include('./templates/footer') %>
 
 <script>
-  document.getElementById('moto-icon-hide').style.display = "none";
-  document.querySelectorAll('.bottom-nav li')[4].style.color="white";
+  document.getElementById("moto-icon-hide").style.display = "none";
+  document.querySelectorAll(".bottom-nav li")[4].style.color = "white";
 </script>
-
