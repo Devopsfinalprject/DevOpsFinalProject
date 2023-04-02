@@ -32,13 +32,13 @@ jobs:
         with:
           context: .
           push: true
-          tags: gc6532115001/234-deploylab-frontend:latest
+          tags: gc6532115001/devopsproject:latest
       -
         name: prepare the docker-compose run
         run: |
-              mkdir 234-deploylab-frontend
-              cp docker-compose.yml 234-deploylab-frontend/docker-compose.yml
-              cd 234-deploylab-frontend
+              mkdir devopsproject
+              cp docker-compose.yml devopsproject/docker-compose.yml
+              cd devopsproject
               docker-compose -H ${{ secrets.HOST_SERVER }} down
               docker-compose -H ${{ secrets.HOST_SERVER }} pull
               docker-compose -H ${{ secrets.HOST_SERVER }} up -d
